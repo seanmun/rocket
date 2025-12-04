@@ -1,15 +1,16 @@
-import Link from 'next/link';
+'use client';
+
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
+import { PlayerModal } from '@/components/player-modal';
 import { players } from '@/data/players';
-import { Users, Trophy, Target } from 'lucide-react';
-
-export const metadata = {
-  title: 'Players | Rocket Pool Tour',
-  description: '40 elite professional players competing on the Rocket Pool Tour. View player profiles, stats, and rankings.',
-};
+import { Player } from '@/data/types';
+import { Users, Trophy } from 'lucide-react';
+import { useState } from 'react';
 
 export default function PlayersPage() {
+  const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
+
   return (
     <>
       <Navigation />
@@ -32,10 +33,10 @@ export default function PlayersPage() {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {players.map((player) => (
-                  <Link
+                  <button
                     key={player.id}
-                    href={`/players/${player.id}`}
-                    className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all group"
+                    onClick={() => setSelectedPlayer(player)}
+                    className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all group text-left w-full cursor-pointer"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple flex items-center justify-center flex-shrink-0 group-hover:glow-teal transition-all">
@@ -64,9 +65,12 @@ export default function PlayersPage() {
                             <div className="font-bold text-rpt-aqua">{player.stats.averageScore}</div>
                           </div>
                         </div>
+                        <div className="mt-3 text-xs text-rpt-teal group-hover:text-rpt-teal-light transition-colors">
+                          Click for full stats →
+                        </div>
                       </div>
                     </div>
-                  </Link>
+                  </button>
                 ))}
               </div>
             </div>
@@ -81,12 +85,21 @@ export default function PlayersPage() {
               Full Player Profiles Coming Soon
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Detailed stats, career highlights, and live match tracking for all 40 Tour players.
+              Detailed career histories, match-by-match breakdowns, and live tracking for all 40 Tour players.
             </p>
           </div>
         </section>
       </main>
       <Footer />
+
+      {/* Player Modal */}
+      {selectedPlayer && (
+        <PlayerModal
+          player={selectedPlayer}
+          isOpen={!!selectedPlayer}
+          onClose={() => setSelectedPlayer(null)}
+        />
+      )}
     </>
   );
 }

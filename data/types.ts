@@ -1,3 +1,11 @@
+export interface RecentPerformance {
+  eventName: string;
+  location: string;
+  score: number;
+  placement: number;
+  date: string;
+}
+
 export interface Player {
   id: string;
   name: string;
@@ -12,8 +20,11 @@ export interface Player {
     highScore: number;
     wins: number;
     totalPoints: number;
+    breakPercentage?: number;
+    runoutPercentage?: number;
   };
   ranking: number;
+  recentPerformances?: RecentPerformance[];
   image?: string; // Will be placeholder for now
 }
 
