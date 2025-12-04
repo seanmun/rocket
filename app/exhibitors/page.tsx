@@ -4,8 +4,8 @@ import { Building2, Users, TrendingUp, Globe, Handshake, Mail, Phone, FileText }
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Partners & Exhibitors | Rocket Pool Tour',
-  description: 'Partner with the Rocket Pool Tour. Exhibitor opportunities, sponsorships, and brand partnerships for the future of professional billiards.',
+  title: 'Exhibitors | Rocket Pool Tour',
+  description: 'Become an exhibitor at the Rocket Pool Tour. 30 exclusive 10\' x 10\' exhibition spaces available with 20% early bird discount.',
 };
 
 export default function PartnersPage() {

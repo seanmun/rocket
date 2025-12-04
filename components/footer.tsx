@@ -63,8 +63,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/partners" className="text-sm text-gray-400 hover:text-rpt-teal transition-colors">
-                  Partners
+                <Link href="/exhibitors" className="text-sm text-gray-400 hover:text-rpt-teal transition-colors">
+                  Exhibitors
                 </Link>
               </li>
               <li>

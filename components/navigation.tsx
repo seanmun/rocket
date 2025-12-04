@@ -15,7 +15,7 @@ export function Navigation() {
     { href: '/players', label: 'Players' },
     { href: '/stats', label: 'Stats' },
     { href: '/news', label: 'News' },
-    { href: '/partners', label: 'Partners' },
+    { href: '/exhibitors', label: 'Exhibitors' },
     { href: '/contact', label: 'Contact' },
   ];
 
