@@ -154,7 +154,7 @@ export default function SchedulePage() {
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-4 bg-rpt-teal hover:bg-rpt-teal-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-teal"
+              className="inline-block px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
             >
               Join Our Mailing List
             </a>

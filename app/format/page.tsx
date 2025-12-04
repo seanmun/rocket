@@ -248,7 +248,7 @@ export default function FormatPage() {
                 </a>
                 <a
                   href="/players"
-                  className="px-8 py-4 bg-rpt-gray-800 hover:bg-rpt-gray-700 text-white font-heading font-bold rounded-lg border border-rpt-gray-600 transition-all"
+                  className="px-8 py-4 bg-rpt-blue-dark hover:bg-rpt-blue text-white font-heading font-bold rounded-lg transition-all"
                 >
                   Meet the Players
                 </a>

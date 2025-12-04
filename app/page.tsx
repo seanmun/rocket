@@ -41,13 +41,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link
                 href="/format"
-                className="px-8 py-4 bg-rpt-teal hover:bg-rpt-teal-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-teal"
+                className="px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
               >
                 Learn About Rocket Run-Out©
               </Link>
               <Link
                 href="/schedule"
-                className="px-8 py-4 bg-rpt-gray-800 hover:bg-rpt-gray-700 text-white font-heading font-bold rounded-lg border border-rpt-gray-600 transition-all"
+                className="px-8 py-4 bg-rpt-blue-dark hover:bg-rpt-blue text-white font-heading font-bold rounded-lg transition-all"
               >
                 View Schedule
               </Link>
@@ -216,7 +216,7 @@ export default function Home() {
             <div className="text-center">
               <Link
                 href="/schedule"
-                className="inline-block px-6 py-3 bg-rpt-gray-800 hover:bg-rpt-gray-700 text-white font-heading font-bold rounded-lg border border-rpt-gray-600 transition-all"
+                className="inline-block px-6 py-3 bg-rpt-blue-dark hover:bg-rpt-blue text-white font-heading font-bold rounded-lg transition-all"
               >
                 View Full Schedule
               </Link>
@@ -303,7 +303,7 @@ export default function Home() {
             <div className="text-center">
               <Link
                 href="/news"
-                className="inline-block px-6 py-3 bg-rpt-gray-800 hover:bg-rpt-gray-700 text-white font-heading font-bold rounded-lg border border-rpt-gray-600 transition-all"
+                className="inline-block px-6 py-3 bg-rpt-blue-dark hover:bg-rpt-blue text-white font-heading font-bold rounded-lg transition-all"
               >
                 All News
               </Link>
@@ -322,7 +322,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-block px-8 py-4 bg-rpt-teal hover:bg-rpt-teal-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-teal"
+              className="inline-block px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
             >
               Get In Touch
             </Link>
