@@ -329,12 +329,20 @@ export default function Home() {
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               The Rocket Pool Tour is redefining professional billiards. Stay updated on Season One launch, player announcements, and partnership opportunities.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
-            >
-              Get In Touch
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/partners"
+                className="inline-block px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
+              >
+                Become an Exhibitor
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-block px-8 py-4 bg-rpt-blue-dark hover:bg-rpt-blue text-white font-heading font-bold rounded-lg transition-all"
+              >
+                Get In Touch
+              </Link>
+            </div>
           </div>
         </section>
       </main>
