@@ -67,11 +67,11 @@ export const players: Player[] = [
     ranking: 3,
   },
   {
-    id: 'joshua-filler',
-    name: 'Joshua Filler',
-    nickname: 'The Killer',
-    bio: 'German pool prodigy and multiple-time world champion. Dynamic playing style with exceptional break shots.',
-    hometown: 'Bönen, Germany',
+    id: 'kevin-clark',
+    name: 'Kevin Clark',
+    nickname: '',
+    bio: 'Scranton\'s pride with a methodical approach and unwavering focus. Known for his consistency under pressure and ability to capitalize on opponent mistakes.',
+    hometown: 'Scranton, PA',
     tourCard: 4,
     stats: {
       breakAndRuns: 35,
