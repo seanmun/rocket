@@ -2,21 +2,87 @@ import { NewsArticle } from './types';
 
 export const news: NewsArticle[] = [
   {
-    id: 'rpt-launches-website',
-    title: 'Rocket Pool Tour Unveils Groundbreaking Digital Platform',
-    slug: 'rpt-launches-website',
-    excerpt: 'The Rocket Pool Tour takes a major step forward with the launch of its new website and digital infrastructure, positioning the league as a modern professional sports organization.',
-    content: `The Rocket Pool Tour is proud to announce the launch of its official digital platform, marking a significant milestone in the evolution of professional billiards.
+    id: 'introducing-railbirds',
+    title: 'RPT Partners with Railbirds for Revolutionary Wagering Experience',
+    slug: 'introducing-railbirds',
+    excerpt: 'The Rocket Pool Tour announces exclusive partnership with Railbirds, bringing fan-to-fan wagering and real-time engagement to professional billiards.',
+    content: `The Rocket Pool Tour is excited to announce a groundbreaking partnership with Railbirds, the innovative fan-to-fan wagering platform that's transforming how sports fans engage with live competition.
 
-This state-of-the-art website represents more than just an online presence—it's the foundation of a complete league operating system. Built with modern technology and designed with fans, partners, and players in mind, the platform showcases what makes the RPT different: innovation, professionalism, and a commitment to bringing pool into the modern sports era.
+Railbirds enables fans to make real-time wagers with each other during RPT matches, creating an interactive viewing experience that brings the excitement of the rail—the traditional gathering place for pool spectators—into the digital age.
 
-The new platform features comprehensive player profiles, live statistics, tour schedules, and exclusive partner portals. It's designed to scale from a marketing site into a full stats engine and fan engagement platform as the Tour grows.
+"Railbirds is the perfect partner for the Rocket Pool Tour," said Ed "EJ" Glode, Co-Founder. "Pool has always been a sport where fans watch closely and discuss every shot. Railbirds takes that tradition and enhances it with modern technology, creating engagement opportunities that simply don't exist in other sports."
 
-"This is about showing the world that professional pool deserves the same level of digital infrastructure as any major sport," said Rodney "Rocket" Morris, Co-Founder and Tour Commissioner. "We're building something that will change how fans experience our sport."
+The Rocket Run-Out© format's precision scoring system and rapid gameplay make it ideal for in-match wagering. Fans will be able to bet on everything from individual rack outcomes to break percentages to run-out attempts—all in real time as matches unfold.
 
-The platform launch comes ahead of the Tour's inaugural season, set to begin in Q2 2026.`,
-    publishedAt: '2025-12-03',
+"The RPT's statistical accuracy is a game-changer for fan engagement," said the Railbirds team. "With the Rocket Run-Out format, we can offer betting opportunities that are both exciting and fair, backed by real data."
+
+The Railbirds integration will launch alongside Season One in Q2 2026, giving fans an unprecedented level of engagement with professional pool.
+
+Learn more at railbirds.app`,
+    publishedAt: '2025-12-04',
     author: 'RPT Media Team',
+    category: 'announcement',
+  },
+  {
+    id: 'stats-engine-development',
+    title: 'RPT Stats Engine: Building the Future of Pool Analytics',
+    slug: 'stats-engine-development',
+    excerpt: 'An inside look at the development of the Rocket Pool Tour\'s revolutionary statistics tracking system that will change professional billiards forever.',
+    content: `The Rocket Pool Tour is hard at work developing what will become the first comprehensive, accurate statistics engine in professional pool history—and it's going to change everything about how we understand the sport.
+
+"For decades, pool has lacked the statistical depth of other professional sports," explains Rodney "Rocket" Morris, Co-Founder and Tour Commissioner. "We've had win-loss records and maybe some rough estimates, but nothing like what you see in basketball, baseball, or golf. The Rocket Run-Out© format finally makes true statistical tracking possible."
+
+The RPT Stats Engine will track dozens of metrics for every player, every rack, and every shot:
+- Break percentages and efficiency
+- Run-out success rates by position
+- Ball-in-hand conversion rates
+- Second-suit run frequency
+- Average points per rack
+- Pressure performance metrics
+- Head-to-head matchup analytics
+- And much more
+
+This data will power everything from fan engagement features to broadcast graphics to advanced betting opportunities with partners like Railbirds. It will also help players analyze their performance in unprecedented detail.
+
+"We're building this in phases," said Ed Glode, Co-Founder. "The foundation is launching with Season One, but we're already planning features that will make this the most sophisticated stats platform in cue sports history."
+
+The Stats Engine will integrate directly with the RPT website, mobile apps, and partner platforms, providing real-time data during live matches and comprehensive historical analytics.
+
+Initial launch targeted for Q2 2026 alongside Season One. Full platform rollout planned for Season Two.`,
+    publishedAt: '2025-12-04',
+    author: 'RPT Tech Team',
+    category: 'tech',
+  },
+  {
+    id: 'website-refresh-2025',
+    title: 'RPT Website Gets Major Refresh: New Design, Features, and Fan Experience',
+    slug: 'website-refresh-2025',
+    excerpt: 'The Rocket Pool Tour unveils a completely redesigned website with enhanced player profiles, interactive features, and a modern look that matches the league\'s innovative spirit.',
+    content: `The Rocket Pool Tour has launched a comprehensive website refresh, delivering a modern, professional digital experience that reflects the league's commitment to innovation and fan engagement.
+
+The new design features:
+- **Enhanced Player Profiles**: Interactive player cards with detailed stats, career highlights, and performance tracking
+- **Mobile-First Design**: Optimized experience across all devices with responsive layouts and touch-friendly interfaces
+- **Exhibitor Portal**: Dedicated section for partnership opportunities with transparent pricing and benefits
+- **Contact Hub**: Streamlined communication with founder profiles and multiple contact channels
+- **Dark Theme**: Eye-catching teal, purple, and aqua color scheme that pops on any screen
+
+"We wanted a website that looks as modern and professional as the Tour itself," said Rodney Morris. "This isn't just a facelift—it's a complete reimagining of how a professional pool league presents itself to the world."
+
+The refresh includes technical improvements like faster load times, better SEO, and a foundation that will support future features like the Stats Engine and fan engagement tools.
+
+Key new features:
+- Clickable player cards with modal popups showing full statistics
+- Improved mobile navigation and responsive layouts
+- Dedicated exhibitor page highlighting 30 available 10'x10' spaces
+- Founder contact information and business inquiry forms
+- Foundation for upcoming Stats Hub integration
+
+"This is just the beginning," added Ed Glode. "As we move toward Season One, you'll see this platform evolve into a full league operating system with live scoring, fan features, and integrations with partners like Railbirds."
+
+The new site is live now at rocketpooltour.com. Mobile users will notice significant improvements in readability and interaction, especially with player profiles and event information.`,
+    publishedAt: '2025-12-04',
+    author: 'RPT Digital Team',
     category: 'tech',
   },
   {
