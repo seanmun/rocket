@@ -97,16 +97,16 @@ export default function SchedulePage() {
                         </div>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                        <div className="text-right">
-                          <div className="text-sm text-gray-400 mb-1">Prize Pool</div>
-                          <div className="font-heading font-bold text-xl text-rpt-purple">
+                      <div className="flex flex-row items-start gap-4">
+                        <div className="text-left md:text-right">
+                          <div className="text-xs md:text-sm text-gray-400 mb-1">Prize Pool</div>
+                          <div className="font-heading font-bold text-lg md:text-xl text-rpt-purple">
                             ${event.prizePool.toLocaleString()}
                           </div>
                         </div>
-                        <div className="text-right sm:min-w-[140px]">
-                          <div className="text-sm text-gray-400 mb-1">Date</div>
-                          <div className="font-semibold">
+                        <div className="text-left md:text-right min-w-[100px] md:min-w-[140px]">
+                          <div className="text-xs md:text-sm text-gray-400 mb-1">Date</div>
+                          <div className="font-semibold text-sm md:text-base">
                             {new Date(event.date).toLocaleDateString('en-US', {
                               month: 'short',
                               day: 'numeric',
