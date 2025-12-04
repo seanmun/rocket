@@ -50,11 +50,11 @@ export const players: Player[] = [
     ],
   },
   {
-    id: 'skyler-woodward',
-    name: 'Skyler Woodward',
-    nickname: '',
-    bio: 'Rising star of American pool with multiple tournament victories. Known for aggressive play and quick decision-making.',
-    hometown: 'Orlando, FL',
+    id: 'william-munley',
+    name: 'William Munley',
+    nickname: 'Bumper',
+    bio: 'Scranton\'s finest with a reputation for clutch performances and strategic mastery. Known for his calculated approach and ability to read the table like few others.',
+    hometown: 'Scranton, PA',
     tourCard: 3,
     stats: {
       breakAndRuns: 38,
