@@ -1,15 +1,21 @@
+'use client';
+
 import Link from 'next/link';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
+import { PlayerModal } from '@/components/player-modal';
 import { ChevronDown, Trophy, Zap, BarChart3, Users, Calendar } from 'lucide-react';
 import { getRecentArticles } from '@/data/news';
 import { getUpcomingEvents } from '@/data/events';
 import { getPlayersByRanking } from '@/data/players';
+import { Player } from '@/data/types';
+import { useState } from 'react';
 
 export default function Home() {
   const recentNews = getRecentArticles(3);
   const upcomingEvents = getUpcomingEvents().slice(0, 3);
   const topPlayers = getPlayersByRanking().slice(0, 6);
+  const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
 
   return (
     <>
@@ -238,10 +244,10 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
               {topPlayers.map((player) => (
-                <Link
+                <button
                   key={player.id}
-                  href={`/players/${player.id}`}
-                  className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-purple transition-all text-center group"
+                  onClick={() => setSelectedPlayer(player)}
+                  className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-purple transition-all text-center group cursor-pointer w-full"
                 >
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple mb-4 mx-auto flex items-center justify-center group-hover:glow-purple transition-all">
                     <Users size={32} className="text-white" />
@@ -251,7 +257,10 @@ export default function Home() {
                     <p className="text-xs text-rpt-teal mb-2">"{player.nickname}"</p>
                   )}
                   <p className="text-xs text-gray-400">Rank #{player.ranking}</p>
-                </Link>
+                  <div className="mt-3 text-xs text-rpt-teal group-hover:text-rpt-teal-light transition-colors">
+                    View Stats →
+                  </div>
+                </button>
               ))}
             </div>
 
@@ -330,6 +339,15 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+
+      {/* Player Modal */}
+      {selectedPlayer && (
+        <PlayerModal
+          player={selectedPlayer}
+          isOpen={!!selectedPlayer}
+          onClose={() => setSelectedPlayer(null)}
+        />
+      )}
     </>
   );
 }
