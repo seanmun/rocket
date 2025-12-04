@@ -29,15 +29,15 @@ export function PlayerModal({ player, isOpen, onClose }: PlayerModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/90 backdrop-blur-sm"
         onClick={onClose}
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-rpt-gray-900 rounded-xl border border-rpt-gray-700 shadow-2xl">
+      <div className="relative w-full max-w-4xl max-h-[85vh] md:max-h-[90vh] overflow-y-auto bg-rpt-gray-900 rounded-xl border-2 border-rpt-purple/40 shadow-2xl glow-purple">
         {/* Close button */}
         <button
           onClick={onClose}
