@@ -13,6 +13,11 @@ export default function MediaPage() {
   const [error, setError] = useState('');
 
   const handlePitchAccess = (pitchId: string) => {
+    // Disable password for pitch-1
+    if (pitchId === 'pitch-1') {
+      router.push(`/media/${pitchId}`);
+      return;
+    }
     setSelectedPitch(pitchId);
     setPassword('');
     setError('');
