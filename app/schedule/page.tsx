@@ -1,7 +1,7 @@
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { events } from '@/data/events';
-import { Calendar, MapPin, DollarSign, Trophy } from 'lucide-react';
+import { Calendar, MapPin, DollarSign, Trophy, Ticket } from 'lucide-react';
 
 export const metadata = {
   title: 'Tour Schedule | Rocket Pool Tour',
@@ -72,48 +72,60 @@ export default function SchedulePage() {
                     key={event.id}
                     className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all group"
                   >
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="px-3 py-1 rounded-full bg-rpt-teal/20 border border-rpt-teal/30">
-                            <span className="text-rpt-teal text-sm font-bold">WEEK {event.week}</span>
-                          </div>
-                          {event.week === 15 && (
-                            <div className="px-3 py-1 rounded-full bg-rpt-purple/20 border border-rpt-purple/30">
-                              <span className="text-rpt-purple text-sm font-bold">CHAMPIONSHIP</span>
+                    <div className="flex flex-col gap-4">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="px-3 py-1 rounded-full bg-rpt-teal/20 border border-rpt-teal/30">
+                              <span className="text-rpt-teal text-sm font-bold">WEEK {event.week}</span>
                             </div>
-                          )}
-                        </div>
-                        <h3 className="font-heading font-bold text-2xl mb-2 group-hover:text-rpt-teal transition-colors">
-                          {event.name}
-                        </h3>
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-gray-400">
-                          <div className="flex items-center gap-2">
-                            <MapPin size={16} className="text-rpt-teal" />
-                            <span className="text-sm">{event.location}</span>
+                            {event.week === 15 && (
+                              <div className="px-3 py-1 rounded-full bg-rpt-purple/20 border border-rpt-purple/30">
+                                <span className="text-rpt-purple text-sm font-bold">CHAMPIONSHIP</span>
+                              </div>
+                            )}
                           </div>
-                          <span className="hidden sm:block text-gray-600">•</span>
-                          <span className="text-sm">{event.city}, {event.state}</span>
+                          <h3 className="font-heading font-bold text-2xl mb-2 group-hover:text-rpt-teal transition-colors">
+                            {event.name}
+                          </h3>
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-gray-400">
+                            <div className="flex items-center gap-2">
+                              <MapPin size={16} className="text-rpt-teal" />
+                              <span className="text-sm">{event.location}</span>
+                            </div>
+                            <span className="hidden sm:block text-gray-600">•</span>
+                            <span className="text-sm">{event.city}, {event.state}</span>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-row items-start gap-4">
+                          <div className="text-left md:text-right">
+                            <div className="text-xs md:text-sm text-gray-400 mb-1">Prize Pool</div>
+                            <div className="font-heading font-bold text-lg md:text-xl text-rpt-purple">
+                              ${event.prizePool.toLocaleString()}
+                            </div>
+                          </div>
+                          <div className="text-left md:text-right min-w-[100px] md:min-w-[140px]">
+                            <div className="text-xs md:text-sm text-gray-400 mb-1">Date</div>
+                            <div className="font-semibold text-sm md:text-base">
+                              {new Date(event.date).toLocaleDateString('en-US', {
+                                month: 'short',
+                                day: 'numeric',
+                                year: 'numeric',
+                              })}
+                            </div>
+                          </div>
                         </div>
                       </div>
 
-                      <div className="flex flex-row items-start gap-4">
-                        <div className="text-left md:text-right">
-                          <div className="text-xs md:text-sm text-gray-400 mb-1">Prize Pool</div>
-                          <div className="font-heading font-bold text-lg md:text-xl text-rpt-purple">
-                            ${event.prizePool.toLocaleString()}
-                          </div>
-                        </div>
-                        <div className="text-left md:text-right min-w-[100px] md:min-w-[140px]">
-                          <div className="text-xs md:text-sm text-gray-400 mb-1">Date</div>
-                          <div className="font-semibold text-sm md:text-base">
-                            {new Date(event.date).toLocaleDateString('en-US', {
-                              month: 'short',
-                              day: 'numeric',
-                              year: 'numeric',
-                            })}
-                          </div>
-                        </div>
+                      <div className="flex justify-end pt-2 border-t border-rpt-gray-700">
+                        <button
+                          disabled
+                          className="inline-flex items-center gap-2 px-6 py-2.5 bg-gray-600 text-gray-400 font-heading font-bold rounded-lg cursor-not-allowed opacity-60"
+                        >
+                          <Ticket size={18} />
+                          Buy Tickets
+                        </button>
                       </div>
                     </div>
                   </div>
