@@ -79,7 +79,7 @@ export default function AboutPage() {
                   <Lightbulb className="w-10 h-10 text-rpt-teal mb-4" />
                   <h3 className="font-heading font-bold text-xl mb-3">Revolutionary Format</h3>
                   <p className="text-gray-300">
-                    The Rocket Run-Out© format is a proprietary, IP-owned game that combines the best of 8-ball and 9-ball into a fast-paced, offense-driven experience that keeps fans engaged from start to finish.
+                    The Rocket Run-Out© format is part of the Saratoga series—a proprietary, all-offense game featuring 5 solids, 5 stripes, and the 8-ball. Players choose their suit after the break and run out, with scoring from 200 points (break and run) down to 10 points per ball for incomplete runs.
                   </p>
                 </div>
 
