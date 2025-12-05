@@ -27,7 +27,7 @@ const slides = [
         <h2 className="font-heading font-bold text-5xl mb-8">Founders</h2>
 
         {/* Founder Photos */}
-        <div className="flex justify-center gap-8 mb-8">
+        <div className="flex justify-start gap-8 mb-8">
           <div className="text-center">
             <div className="w-32 h-32 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple flex items-center justify-center overflow-hidden mb-3">
               <Image
