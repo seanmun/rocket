@@ -72,6 +72,11 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/media" className="text-sm text-gray-400 hover:text-rpt-teal transition-colors">
+                  Media
+                </Link>
+              </li>
             </ul>
           </div>
 
