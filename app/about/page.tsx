@@ -2,6 +2,7 @@ import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { team } from '@/data/team';
 import { Users, Target, Lightbulb, TrendingUp } from 'lucide-react';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'About | Rocket Pool Tour',
@@ -117,23 +118,35 @@ export default function AboutPage() {
               <h2 className="font-heading font-bold text-4xl mb-12 text-center">The Team</h2>
 
               <div className="space-y-8">
-                {team.map((member) => (
-                  <div
-                    key={member.id}
-                    className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-gray-700 hover:border-rpt-teal transition-all"
-                  >
-                    <div className="flex items-start gap-6">
-                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple flex items-center justify-center flex-shrink-0">
-                        <Users size={40} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-heading font-bold text-2xl mb-1">{member.name}</h3>
-                        <p className="text-rpt-teal font-semibold mb-4">{member.title}</p>
-                        <p className="text-gray-300 leading-relaxed">{member.bio}</p>
+                {team.map((member) => {
+                  const imagePath = member.id === 'rodney-morris'
+                    ? '/images/Rodney-removebg.png'
+                    : '/images/Ed.png';
+
+                  return (
+                    <div
+                      key={member.id}
+                      className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-gray-700 hover:border-rpt-teal transition-all"
+                    >
+                      <div className="flex items-start gap-6">
+                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple flex items-center justify-center flex-shrink-0 overflow-hidden">
+                          <Image
+                            src={imagePath}
+                            alt={member.name}
+                            width={96}
+                            height={96}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-heading font-bold text-2xl mb-1">{member.name}</h3>
+                          <p className="text-rpt-teal font-semibold mb-4">{member.title}</p>
+                          <p className="text-gray-300 leading-relaxed">{member.bio}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
