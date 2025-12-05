@@ -25,6 +25,37 @@ const slides = [
     content: (
       <div className="space-y-6">
         <h2 className="font-heading font-bold text-5xl mb-8">Founders</h2>
+
+        {/* Founder Photos */}
+        <div className="flex justify-center gap-8 mb-8">
+          <div className="text-center">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple flex items-center justify-center overflow-hidden mb-3">
+              <Image
+                src="/images/Rodney-sq.png"
+                alt="Rodney Morris"
+                width={128}
+                height={128}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="font-heading font-bold text-rpt-teal">Rodney Morris</p>
+            <p className="text-sm text-gray-400">"Rocket"</p>
+          </div>
+          <div className="text-center">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-rpt-purple to-rpt-teal flex items-center justify-center overflow-hidden mb-3">
+              <Image
+                src="/images/Ed-sq.png"
+                alt="Ed Glode"
+                width={128}
+                height={128}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="font-heading font-bold text-rpt-purple">Ed Glode</p>
+            <p className="text-sm text-gray-400">"EJ"</p>
+          </div>
+        </div>
+
         <div className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-teal/30">
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
             In 2008, World Champion <span className="text-rpt-teal font-bold">"Rocket" Rodney Morris</span> met <span className="text-rpt-purple font-bold">Ed "EJ" Glode</span> at the first Wyoming Open Pool Tournament, where Ed personally invited Rodney to compete. The two became fast friends, bonded by their passion for pool and their shared belief that the game—and the way it's traditionally played—needed to evolve.
