@@ -213,6 +213,32 @@ const slides = [
     content: (
       <div className="space-y-6">
         <h2 className="font-heading font-bold text-5xl mb-8">Elevating the DraftKings Brand</h2>
+
+        {/* Partnership Visual */}
+        <div className="flex items-center justify-center gap-8 mb-8">
+          <div className="w-32 h-32 flex items-center justify-center">
+            <Image
+              src="/logos/DraftKings_logo.png"
+              alt="DraftKings"
+              width={128}
+              height={128}
+              className="object-contain"
+            />
+          </div>
+          <div className="text-4xl text-rpt-yellow">
+            🤝
+          </div>
+          <div className="w-32 h-32 flex items-center justify-center">
+            <Image
+              src="/logos/8ball-rocket.png"
+              alt="Rocket Pool Tour"
+              width={128}
+              height={128}
+              className="object-contain"
+            />
+          </div>
+        </div>
+
         <div className="space-y-4">
           <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
             <h3 className="font-heading font-bold text-xl mb-3 text-rpt-teal">Premium Sports Positioning</h3>
