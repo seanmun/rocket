@@ -4,7 +4,7 @@ import { Zap, Trophy, BarChart3, Target, Eye, TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'Rocket Run-Out Format | Rocket Pool Tour',
-  description: 'Learn about the revolutionary Rocket Run-Out© format - a fast-paced, offense-driven hybrid of 8-ball and 9-ball designed for modern professional pool.',
+  description: 'Learn about the revolutionary Rocket Run-Out© format - a fast-paced, offense-driven game designed for modern professional pool with precise statistical tracking.',
 };
 
 export default function FormatPage() {
@@ -23,7 +23,7 @@ export default function FormatPage() {
                 Rocket Run-Out©
               </h1>
               <p className="text-xl text-gray-300 mb-4">
-                A revolutionary hybrid of 8-ball and 9-ball
+                A revolutionary pool format created by Rodney "Rocket" Morris
               </p>
               <p className="text-lg text-gray-400">
                 Fast-paced • Offense-driven • Statistically precise • Fan-friendly
@@ -39,7 +39,7 @@ export default function FormatPage() {
               <div className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-purple/30">
                 <h2 className="font-heading font-bold text-3xl mb-6">Overview</h2>
                 <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Rocket Run-Out© is one of a series of pool games designated by Rodney Morris as the <span className="text-rpt-purple font-semibold">Saratoga series</span>—a hybrid of 8-ball and 9-ball designed to maximize offensive opportunities, create dramatic scoring moments, and enable accurate statistical tracking.
+                  Rocket Run-Out© is part of the <span className="text-rpt-purple font-semibold">Saratoga series</span>—a revolutionary pool format created by World Champion Rodney Morris designed to maximize offensive opportunities, create dramatic scoring moments, and enable accurate statistical tracking.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
                   This format has been tested and refined over years of development to create the perfect balance between skill, strategy, and entertainment value.
@@ -63,9 +63,14 @@ export default function FormatPage() {
                     </div>
                     <div>
                       <h3 className="font-heading font-bold text-xl mb-2">The Rack</h3>
-                      <p className="text-gray-300">
-                        Rack the 1-4, 8, and 9-12 in a <span className="text-rpt-teal font-semibold">diamond formation</span>. The 1 ball is placed in front, the 8 ball in the middle, and the 9 ball in the back.
+                      <p className="text-gray-300 mb-2">
+                        Rack <span className="text-rpt-teal font-semibold">5 solids, 5 stripes, and the black ball (8-ball)</span>.
                       </p>
+                      <ul className="text-gray-400 text-sm space-y-1 ml-4">
+                        <li>• The lowest stripe or lowest solid must be on the top and bottom (doesn't matter which)</li>
+                        <li>• One solid and one stripe must be in the corners</li>
+                        <li>• The black ball (8-ball) is racked in the middle</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -77,8 +82,11 @@ export default function FormatPage() {
                     </div>
                     <div>
                       <h3 className="font-heading font-bold text-xl mb-2">The Break</h3>
-                      <p className="text-gray-300">
-                        After the break, the player selects either <span className="text-rpt-purple font-semibold">stripes or solids</span>. This choice determines which group of balls the player will run.
+                      <p className="text-gray-300 mb-2">
+                        <span className="text-rpt-purple font-semibold">Break from anywhere behind the headstring</span>. The table is always open after the break, no matter what balls are made.
+                      </p>
+                      <p className="text-gray-400 text-sm">
+                        Special rule: If the 8-ball is made on the break, you have the option to re-break or spot it and shoot from there. If it's the only ball made on the break and you elect to spot it, it counts as a pocketed ball (eligible for 200pts if you run out).
                       </p>
                     </div>
                   </div>
@@ -90,9 +98,12 @@ export default function FormatPage() {
                       <span className="text-rpt-aqua font-heading font-bold text-xl">3</span>
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-xl mb-2">Run in Rotation</h3>
-                      <p className="text-gray-300">
-                        Players must run their selected group <span className="text-rpt-aqua font-semibold">in rotation</span>—combining the strategic elements of 8-ball with the sequential challenge of 9-ball. This creates continuous offensive opportunities and dramatic momentum shifts.
+                      <h3 className="font-heading font-bold text-xl mb-2">Choose Your Suit & Run Out</h3>
+                      <p className="text-gray-300 mb-2">
+                        After the break, <span className="text-rpt-aqua font-semibold">choose either solids or stripes and run them out</span>, making the black ball (8-ball) last.
+                      </p>
+                      <p className="text-gray-400 text-sm">
+                        You can shoot from where the balls lay for higher points, or take ball in hand at any time (but this affects your scoring).
                       </p>
                     </div>
                   </div>
@@ -104,9 +115,26 @@ export default function FormatPage() {
                       <span className="text-rpt-yellow font-heading font-bold text-xl">4</span>
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-xl mb-2">Offense-Driven</h3>
-                      <p className="text-gray-300">
-                        If a player misses, <span className="text-rpt-yellow font-semibold">ball in hand is awarded</span> to the opponent, who can attempt to run the second suit for points. This keeps the action moving and creates comeback opportunities in every rack.
+                      <h3 className="font-heading font-bold text-xl mb-2">If You Miss</h3>
+                      <p className="text-gray-300 mb-2">
+                        If you miss at any time, you <span className="text-rpt-yellow font-semibold">get 10 points per ball pocketed</span> in that game (whichever suit is highest).
+                      </p>
+                      <p className="text-gray-400 text-sm">
+                        Incomplete runs score whatever balls were pocketed.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-rpt-teal/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-rpt-teal font-heading font-bold text-xl">⚠</span>
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-bold text-xl mb-2">Scratch on the Break</h3>
+                      <p className="text-gray-300 mb-2">
+                        If you scratch on the break, <span className="text-rpt-teal font-semibold">it's not loss of turn</span>—you get ball in hand but are only eligible for a <span className="text-rpt-yellow font-semibold">Salvage (up to 60 points max)</span>.
                       </p>
                     </div>
                   </div>
@@ -125,48 +153,58 @@ export default function FormatPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-rpt-teal/10 to-rpt-teal/5 rounded-lg p-8 border-2 border-rpt-teal">
                   <div className="text-center mb-4">
-                    <div className="text-6xl font-heading font-bold text-rpt-teal mb-2">10</div>
+                    <div className="text-6xl font-heading font-bold text-rpt-teal mb-2">200</div>
                     <h3 className="font-heading font-bold text-xl">Break and Run</h3>
                   </div>
                   <p className="text-gray-300 text-center">
-                    Complete your run after breaking. The ultimate display of skill and control.
+                    Make a ball on the break, shoot from where the balls lay, and run out (choosing either solids or stripes, making the black last).
                   </p>
                 </div>
 
                 <div className="bg-gradient-to-br from-rpt-purple/10 to-rpt-purple/5 rounded-lg p-8 border-2 border-rpt-purple">
                   <div className="text-center mb-4">
-                    <div className="text-6xl font-heading font-bold text-rpt-purple mb-2">7</div>
-                    <h3 className="font-heading font-bold text-xl">Ball-in-Hand Run</h3>
+                    <div className="text-6xl font-heading font-bold text-rpt-purple mb-2">150</div>
+                    <h3 className="font-heading font-bold text-xl">Dry Break and Run</h3>
                   </div>
                   <p className="text-gray-300 text-center">
-                    Successfully run your group after receiving ball in hand from opponent's miss.
+                    Break dry (don't make a ball on the break) and run out from there.
                   </p>
                 </div>
 
                 <div className="bg-gradient-to-br from-rpt-aqua/10 to-rpt-aqua/5 rounded-lg p-8 border-2 border-rpt-aqua">
                   <div className="text-center mb-4">
-                    <div className="text-6xl font-heading font-bold text-rpt-aqua mb-2">5</div>
-                    <h3 className="font-heading font-bold text-xl">Second-Suit Run</h3>
+                    <div className="text-6xl font-heading font-bold text-rpt-aqua mb-2">100</div>
+                    <h3 className="font-heading font-bold text-xl">Ball in Hand Run</h3>
                   </div>
                   <p className="text-gray-300 text-center">
-                    Complete the second suit after the first player misses. Comeback opportunities in every rack.
+                    Take ball in hand after the break (you always have this option) and run out.
                   </p>
                 </div>
 
                 <div className="bg-gradient-to-br from-rpt-yellow/10 to-rpt-yellow/5 rounded-lg p-8 border-2 border-rpt-yellow">
                   <div className="text-center mb-4">
-                    <div className="text-6xl font-heading font-bold text-rpt-yellow mb-2">1-4</div>
-                    <h3 className="font-heading font-bold text-xl">Balls Pocketed</h3>
+                    <div className="text-6xl font-heading font-bold text-rpt-yellow mb-2">60</div>
+                    <h3 className="font-heading font-bold text-xl">Salvage</h3>
                   </div>
                   <p className="text-gray-300 text-center">
-                    If you miss before completing your run, score points equal to the number of balls you pocketed.
+                    Maximum points after scratching on the break (you get ball in hand but can only score up to 60pts).
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-gray-500/10 to-gray-500/5 rounded-lg p-8 border-2 border-gray-500 md:col-span-2">
+                  <div className="text-center mb-4">
+                    <div className="text-6xl font-heading font-bold text-gray-300 mb-2">0-50</div>
+                    <h3 className="font-heading font-bold text-xl">Incomplete Run</h3>
+                  </div>
+                  <p className="text-gray-300 text-center">
+                    If you miss before completing your run, score 10 points per ball pocketed (whichever suit is highest).
                   </p>
                 </div>
               </div>
 
               <div className="mt-8 bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700">
                 <p className="text-center text-gray-300">
-                  <strong className="text-rpt-teal">Every shot matters.</strong> The scoring system rewards aggressive play while still valuing partial progress, creating dramatic tension and exciting comebacks throughout each match.
+                  <strong className="text-rpt-teal">Every shot matters.</strong> The scoring system rewards aggressive play while creating dramatic tension and exciting comebacks throughout each match.
                 </p>
               </div>
             </div>
@@ -218,10 +256,10 @@ export default function FormatPage() {
                   <h2 className="font-heading font-bold text-3xl">Perfect for Sports Betting</h2>
                 </div>
                 <p className="text-lg text-gray-300 mb-4 leading-relaxed">
-                  The Rocket Run-Out© format creates <span className="text-rpt-purple font-semibold">52,800+ unique betting possibilities</span> per season through its precise scoring system and statistical tracking capabilities.
+                  The Rocket Run-Out© format creates <span className="text-rpt-purple font-semibold">unprecedented betting possibilities</span> through its precise scoring system and statistical tracking capabilities.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  From break-and-run props to player scoring averages, comeback scenarios to high-score predictions—the format opens unprecedented opportunities for fan engagement and sports betting integration.
+                  From break-and-run props to player scoring averages, comeback scenarios to high-score predictions—the format opens new opportunities for fan engagement and sports betting integration with partners like Railbirds.
                 </p>
               </div>
             </div>
