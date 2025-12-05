@@ -13,14 +13,8 @@ export default function MediaPage() {
   const [error, setError] = useState('');
 
   const handlePitchAccess = (pitchId: string) => {
-    // Disable password for pitch-1
-    if (pitchId === 'pitch-1') {
-      router.push(`/media/${pitchId}`);
-      return;
-    }
-    setSelectedPitch(pitchId);
-    setPassword('');
-    setError('');
+    // Disable password for both pitch decks
+    router.push(`/media/${pitchId}`);
   };
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
