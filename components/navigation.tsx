@@ -26,15 +26,13 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple flex items-center justify-center p-1.5">
-              <Image
-                src="/logos/8ball-rocket.png"
-                alt="Rocket Pool Tour"
-                width={40}
-                height={40}
-                className="w-full h-full object-contain"
-              />
-            </div>
+            <Image
+              src="/logos/8ball-rocket.png"
+              alt="Rocket Pool Tour"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
             <span className="font-heading font-bold text-lg hidden sm:block">
               ROCKET POOL TOUR
             </span>
