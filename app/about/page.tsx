@@ -120,8 +120,8 @@ export default function AboutPage() {
               <div className="space-y-8">
                 {team.map((member) => {
                   const imagePath = member.id === 'rodney-morris'
-                    ? '/images/Rodney-removebg.png'
-                    : '/images/Ed.png';
+                    ? '/images/Rodney-sq.png'
+                    : '/images/Ed-sq.png';
 
                   return (
                     <div
