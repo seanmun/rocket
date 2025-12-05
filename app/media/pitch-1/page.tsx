@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Handshake } from 'lucide-react';
 
 const slides = [
   {
@@ -225,8 +225,8 @@ const slides = [
               className="object-contain"
             />
           </div>
-          <div className="text-4xl text-rpt-yellow">
-            🤝
+          <div className="text-rpt-yellow">
+            <Handshake size={64} strokeWidth={1.5} />
           </div>
           <div className="w-32 h-32 flex items-center justify-center">
             <Image
