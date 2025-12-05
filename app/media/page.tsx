@@ -13,17 +13,18 @@ export default function MediaPage() {
   const [error, setError] = useState('');
 
   const handlePitchAccess = (pitchId: string) => {
-    // Disable password for both pitch decks
-    router.push(`/media/${pitchId}`);
+    setSelectedPitch(pitchId);
+    setPassword('');
+    setError('');
   };
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Password validation (you can change these)
+    // Password validation using environment variables
     const passwords: { [key: string]: string } = {
-      'pitch-1': 'rpt2026',
-      'pitch-2': 'rocket2026'
+      'pitch-1': process.env.NEXT_PUBLIC_PITCH_1_PASSWORD || '',
+      'pitch-2': process.env.NEXT_PUBLIC_PITCH_2_PASSWORD || ''
     };
 
     if (selectedPitch && password === passwords[selectedPitch]) {
