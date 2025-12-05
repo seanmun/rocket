@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { PlayerModal } from '@/components/player-modal';
@@ -24,6 +25,18 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-rpt-black via-rpt-gray-900 to-rpt-black">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,166,166,0.1),transparent_50%)]" />
+
+          {/* Logo Background */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-[0.03]">
+            <Image
+              src="/logos/8ball-rocket.png"
+              alt=""
+              width={800}
+              height={800}
+              className="object-contain max-w-[60%] md:max-w-[50%] lg:max-w-[40%]"
+              priority
+            />
+          </div>
 
           <div className="container mx-auto px-4 text-center relative z-10">
             <div className="mb-6">
