@@ -50,12 +50,46 @@ export const players: Player[] = [
     ],
   },
   {
+    id: 'raj-hundal',
+    name: 'Raj Hundal',
+    nickname: '',
+    bio: 'Dynamic player with exceptional break power and creative shot-making ability. Known for aggressive offensive play and ability to capitalize on opportunities.',
+    hometown: 'Sacramento, CA',
+    tourCard: 3,
+    stats: {
+      breakAndRuns: 40,
+      ballInHandRuns: 21,
+      averageScore: 8.0,
+      highScore: 10,
+      wins: 10,
+      totalPoints: 1120,
+    },
+    ranking: 3,
+  },
+  {
+    id: 'rony-robles',
+    name: 'Rony Robles',
+    nickname: '',
+    bio: 'Skilled professional with precision positioning and tactical excellence. Consistent performer known for mental toughness and strategic decision-making.',
+    hometown: 'New York, NY',
+    tourCard: 4,
+    stats: {
+      breakAndRuns: 39,
+      ballInHandRuns: 20,
+      averageScore: 7.95,
+      highScore: 10,
+      wins: 9,
+      totalPoints: 1085,
+    },
+    ranking: 4,
+  },
+  {
     id: 'william-munley',
     name: 'William Munley',
     nickname: 'Bumper',
     bio: 'Scranton\'s finest with a reputation for clutch performances and strategic mastery. Known for his calculated approach and ability to read the table like few others.',
     hometown: 'Scranton, PA',
-    tourCard: 3,
+    tourCard: 5,
     stats: {
       breakAndRuns: 38,
       ballInHandRuns: 19,
@@ -64,7 +98,7 @@ export const players: Player[] = [
       wins: 9,
       totalPoints: 1052,
     },
-    ranking: 3,
+    ranking: 5,
   },
   {
     id: 'kevin-clark',
@@ -72,7 +106,7 @@ export const players: Player[] = [
     nickname: '',
     bio: 'Scranton\'s pride with a methodical approach and unwavering focus. Known for his consistency under pressure and ability to capitalize on opponent mistakes.',
     hometown: 'Scranton, PA',
-    tourCard: 4,
+    tourCard: 6,
     stats: {
       breakAndRuns: 35,
       ballInHandRuns: 22,
@@ -81,7 +115,7 @@ export const players: Player[] = [
       wins: 8,
       totalPoints: 987,
     },
-    ranking: 4,
+    ranking: 6,
   },
   {
     id: 'jayson-shaw',
@@ -89,7 +123,7 @@ export const players: Player[] = [
     nickname: '',
     bio: 'Scottish professional known for clutch performances and tactical brilliance. Multiple major championship wins.',
     hometown: 'Glasgow, Scotland',
-    tourCard: 5,
+    tourCard: 7,
     stats: {
       breakAndRuns: 33,
       ballInHandRuns: 25,
@@ -98,7 +132,7 @@ export const players: Player[] = [
       wins: 7,
       totalPoints: 921,
     },
-    ranking: 5,
+    ranking: 7,
   },
   {
     id: 'francisco-sanchez-ruiz',
@@ -106,7 +140,7 @@ export const players: Player[] = [
     nickname: '',
     bio: 'Spanish champion with exceptional cue ball control and strategic gameplay. Consistent top-tier performer.',
     hometown: 'Madrid, Spain',
-    tourCard: 6,
+    tourCard: 8,
     stats: {
       breakAndRuns: 31,
       ballInHandRuns: 18,
@@ -115,7 +149,7 @@ export const players: Player[] = [
       wins: 6,
       totalPoints: 854,
     },
-    ranking: 6,
+    ranking: 8,
   },
   {
     id: 'albin-ouschan',
@@ -123,7 +157,7 @@ export const players: Player[] = [
     nickname: '',
     bio: 'Austrian professional with world championship credentials. Smooth stroke and creative shot-making.',
     hometown: 'Klagenfurt, Austria',
-    tourCard: 7,
+    tourCard: 9,
     stats: {
       breakAndRuns: 29,
       ballInHandRuns: 21,
@@ -132,7 +166,7 @@ export const players: Player[] = [
       wins: 5,
       totalPoints: 798,
     },
-    ranking: 7,
+    ranking: 9,
   },
   {
     id: 'john-morra',
@@ -140,7 +174,7 @@ export const players: Player[] = [
     nickname: '',
     bio: 'Canadian standout known for powerful breaks and aggressive run-outs. Multiple tournament champion.',
     hometown: 'Toronto, Canada',
-    tourCard: 8,
+    tourCard: 10,
     stats: {
       breakAndRuns: 27,
       ballInHandRuns: 16,
@@ -149,7 +183,7 @@ export const players: Player[] = [
       wins: 4,
       totalPoints: 731,
     },
-    ranking: 8,
+    ranking: 10,
   },
   {
     id: 'tyler-styer',
@@ -157,7 +191,7 @@ export const players: Player[] = [
     nickname: '',
     bio: 'Young American talent with explosive potential. Known for fearless play and rapid improvement.',
     hometown: 'Austin, TX',
-    tourCard: 9,
+    tourCard: 11,
     stats: {
       breakAndRuns: 24,
       ballInHandRuns: 14,
@@ -166,7 +200,7 @@ export const players: Player[] = [
       wins: 3,
       totalPoints: 672,
     },
-    ranking: 9,
+    ranking: 11,
   },
   {
     id: 'carlo-biado',
@@ -174,7 +208,7 @@ export const players: Player[] = [
     nickname: '',
     bio: 'Filipino champion with world-class credentials. Steady under pressure with excellent fundamentals.',
     hometown: 'Manila, Philippines',
-    tourCard: 10,
+    tourCard: 12,
     stats: {
       breakAndRuns: 22,
       ballInHandRuns: 13,
@@ -183,7 +217,7 @@ export const players: Player[] = [
       wins: 2,
       totalPoints: 615,
     },
-    ranking: 10,
+    ranking: 12,
   },
 ];
 
