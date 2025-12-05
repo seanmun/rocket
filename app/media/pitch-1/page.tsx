@@ -225,7 +225,7 @@ const slides = [
               className="object-contain"
             />
           </div>
-          <div className="text-rpt-yellow">
+          <div className="text-rpt-teal">
             <Handshake size={64} strokeWidth={1.5} />
           </div>
           <div className="w-32 h-32 flex items-center justify-center">
