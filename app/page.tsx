@@ -32,7 +32,7 @@ export default function Home() {
               <div className="flex flex-col items-center gap-1 text-sm">
                 <div className="flex items-center gap-2">
                   <span className="text-gray-400">Next Event:</span>
-                  <span className="text-rpt-teal font-semibold">{upcomingEvents[0].name}</span>
+                  <span className="text-rpt-teal font-semibold">{upcomingEvents[0].location}</span>
                 </div>
                 <div className="text-gray-300">
                   {upcomingEvents[0].city}, {upcomingEvents[0].state}
