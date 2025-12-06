@@ -28,30 +28,28 @@ export default function Home() {
             href="/schedule"
             className="block w-full bg-rpt-gray-800/95 backdrop-blur-sm border-b border-rpt-teal/30 hover:bg-rpt-gray-700/95 transition-all"
           >
-            <div className="container mx-auto px-4 py-4">
-              <div className="flex flex-col items-center gap-1 text-sm">
-                <div className="flex items-center gap-2">
-                  <span className="text-gray-400">Next Event:</span>
-                  <span className="text-rpt-teal font-semibold">{upcomingEvents[0].location}</span>
-                </div>
-                <div className="text-gray-300">
-                  {upcomingEvents[0].city}, {upcomingEvents[0].state}
-                </div>
-                <div className="flex items-center gap-2 text-gray-400">
+            <div className="container mx-auto px-4 py-3">
+              <div className="flex items-center justify-center gap-3 text-sm">
+                <span className="text-gray-400">Next Event:</span>
+                <span className="text-gray-500">|</span>
+                <span className="text-rpt-teal font-semibold">{upcomingEvents[0].city}, {upcomingEvents[0].state}</span>
+                <span className="text-gray-500">|</span>
+                <span className="text-gray-300">
                   {new Date(upcomingEvents[0].date).toLocaleDateString('en-US', {
                     month: 'short',
                     day: 'numeric',
                     year: 'numeric',
                   })}
-                  <Ticket className="w-4 h-4 text-rpt-teal" />
-                </div>
+                </span>
+                <span className="text-gray-500">|</span>
+                <Ticket className="w-4 h-4 text-rpt-teal" />
               </div>
             </div>
           </Link>
         )}
 
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-rpt-black via-rpt-gray-900 to-rpt-black">
+        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-rpt-black via-rpt-gray-900 to-rpt-black pt-12 md:pt-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,166,166,0.1),transparent_50%)]" />
 
           {/* Logo Background */}
