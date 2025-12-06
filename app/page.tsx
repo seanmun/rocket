@@ -49,7 +49,7 @@ export default function Home() {
         )}
 
         {/* Hero Section */}
-        <section className="relative min-h-0 md:min-h-screen flex items-start md:items-center justify-center bg-gradient-to-b from-rpt-black via-rpt-gray-900 to-rpt-black py-16 md:py-0">
+        <section className="relative min-h-0 md:min-h-[85vh] flex items-start md:items-center justify-center bg-gradient-to-b from-rpt-black via-rpt-gray-900 to-rpt-black py-16 md:py-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,166,166,0.1),transparent_50%)]" />
 
           {/* Logo Background */}
@@ -66,19 +66,19 @@ export default function Home() {
 
           <div className="container mx-auto px-4 text-center relative z-10">
 
-            <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
+            <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-4 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
               ROCKET POOL TOUR
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-3xl mx-auto">
               The future of competitive pool. Fast-paced. Data-driven. Revolutionary.
             </p>
 
-            <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
               40 elite players. 15 weeks. $1.5M+ in prizes. One groundbreaking new format.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/format"
                 className="px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
