@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X, Handshake } from 'lucide-react';
+import { useSwipeGesture } from '@/hooks/useSwipeGesture';
 
 const slides = [
   {
@@ -421,29 +422,44 @@ const slides = [
 
 export default function Pitch1Page() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = () => {
     if (currentSlide < slides.length - 1) {
       setCurrentSlide(currentSlide + 1);
+      contentRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const prevSlide = () => {
     if (currentSlide > 0) {
       setCurrentSlide(currentSlide - 1);
+      contentRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    contentRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Add swipe gesture support
+  useSwipeGesture({
+    onSwipeLeft: nextSlide,
+    onSwipeRight: prevSlide,
+    minSwipeDistance: 100,
+  });
 
   return (
     <div className="min-h-screen bg-rpt-black text-white">
       {/* Slide Container */}
       <div className="relative h-screen flex items-center justify-center p-8">
-        <div className="max-w-6xl w-full overflow-y-auto max-h-[calc(100vh-120px)]">
+        <div ref={contentRef} className="max-w-6xl w-full overflow-y-auto max-h-[calc(100vh-120px)]">
           {slides[currentSlide].content}
         </div>
 
-        {/* Navigation Controls */}
-        <div className="absolute bottom-8 left-0 right-0 flex items-center justify-between px-8">
+        {/* Navigation Controls - Hidden on mobile */}
+        <div className="absolute bottom-8 left-0 right-0 hidden md:flex items-center justify-between px-8">
           <button
             onClick={prevSlide}
             disabled={currentSlide === 0}
@@ -456,7 +472,7 @@ export default function Pitch1Page() {
             {slides.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => goToSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all ${
                   index === currentSlide
                     ? 'bg-rpt-teal w-8'
@@ -473,6 +489,21 @@ export default function Pitch1Page() {
           >
             <ChevronRight size={24} />
           </button>
+        </div>
+
+        {/* Mobile Slide Indicators */}
+        <div className="absolute bottom-8 left-0 right-0 flex md:hidden items-center justify-center gap-2 px-8">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentSlide
+                  ? 'bg-rpt-teal w-8'
+                  : 'bg-rpt-gray-700'
+              }`}
+            />
+          ))}
         </div>
 
         {/* Slide Counter */}
