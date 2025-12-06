@@ -11,7 +11,7 @@ interface SwipeGestureOptions {
 export function useSwipeGesture({
   onSwipeLeft,
   onSwipeRight,
-  minSwipeDistance = 100,
+  minSwipeDistance = 50,
   enableHaptic = true,
   enableVisualFeedback = true,
 }: SwipeGestureOptions) {
@@ -19,7 +19,6 @@ export function useSwipeGesture({
   const touchStartY = useRef<number | null>(null);
   const [swipeProgress, setSwipeProgress] = useState(0);
   const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null);
-  const edgeThreshold = 50; // Must start within 50px of left edge
 
   const triggerHaptic = () => {
     if (enableHaptic && 'vibrate' in navigator) {
@@ -30,19 +29,8 @@ export function useSwipeGesture({
 
   useEffect(() => {
     const handleTouchStart = (e: TouchEvent) => {
-      const startX = e.touches[0].clientX;
-      const startY = e.touches[0].clientY;
-
-      // Only enable swipe-right if starting from left edge
-      if (onSwipeRight && startX > edgeThreshold) {
-        // Not from edge, ignore this touch for swipe-right
-        touchStartX.current = null;
-        touchStartY.current = null;
-        return;
-      }
-
-      touchStartX.current = startX;
-      touchStartY.current = startY;
+      touchStartX.current = e.touches[0].clientX;
+      touchStartY.current = e.touches[0].clientY;
     };
 
     const handleTouchMove = (e: TouchEvent) => {
@@ -78,11 +66,8 @@ export function useSwipeGesture({
       setSwipeProgress(0);
       setSwipeDirection(null);
 
-      // Only trigger if horizontal swipe is SIGNIFICANTLY greater than vertical swipe
-      // This prevents accidental swipes while scrolling
-      const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY) * 2;
-
-      if (isHorizontalSwipe) {
+      // Only trigger if horizontal swipe
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
         if (Math.abs(deltaX) > minSwipeDistance) {
           triggerHaptic();
           if (deltaX > 0 && onSwipeRight) {
