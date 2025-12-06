@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main>
+      <main className="pt-16">
         {/* Next Event Banner */}
         {upcomingEvents.length > 0 && (
           <Link
