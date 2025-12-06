@@ -28,19 +28,23 @@ export default function Home() {
             href="/schedule"
             className="block w-full bg-rpt-gray-800/95 backdrop-blur-sm border-b border-rpt-teal/30 hover:bg-rpt-gray-700/95 transition-all"
           >
-            <div className="container mx-auto px-4 py-3">
-              <div className="flex items-center justify-center gap-6 text-sm">
-                <span className="text-gray-400">Next Event:</span>
-                <span className="text-rpt-teal font-semibold">{upcomingEvents[0].name} · {upcomingEvents[0].city}, {upcomingEvents[0].state}</span>
-                <span className="text-gray-400">·</span>
-                <span className="text-gray-300">
+            <div className="container mx-auto px-4 py-4">
+              <div className="flex flex-col items-center gap-1 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-400">Next Event:</span>
+                  <span className="text-rpt-teal font-semibold">{upcomingEvents[0].name}</span>
+                </div>
+                <div className="text-gray-300">
+                  {upcomingEvents[0].city}, {upcomingEvents[0].state}
+                </div>
+                <div className="flex items-center gap-2 text-gray-400">
                   {new Date(upcomingEvents[0].date).toLocaleDateString('en-US', {
                     month: 'short',
                     day: 'numeric',
                     year: 'numeric',
                   })}
-                </span>
-                <Ticket className="w-4 h-4 text-rpt-teal" />
+                  <Ticket className="w-4 h-4 text-rpt-teal" />
+                </div>
               </div>
             </div>
           </Link>
