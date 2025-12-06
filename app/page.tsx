@@ -140,7 +140,7 @@ export default function Home() {
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start">
                         <span className="text-rpt-teal mr-2">•</span>
-                        <span>9 balls racked in diamond formation</span>
+                        <span>5 solids, 5 stripes, and the 8-ball</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-rpt-teal mr-2">•</span>
@@ -148,7 +148,7 @@ export default function Home() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-rpt-teal mr-2">•</span>
-                        <span>Run balls in rotation within your group</span>
+                        <span>Run your suit, make the 8-ball last</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-rpt-teal mr-2">•</span>
@@ -161,20 +161,20 @@ export default function Home() {
                     <h3 className="font-heading font-bold text-xl mb-4 text-rpt-purple">Scoring</h3>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start">
-                        <span className="text-rpt-purple mr-2">10</span>
+                        <span className="text-rpt-purple mr-2">200</span>
                         <span>Break and run</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-rpt-purple mr-2">7</span>
+                        <span className="text-rpt-purple mr-2">150</span>
+                        <span>Dry break and run</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-rpt-purple mr-2">100</span>
                         <span>Ball-in-hand run</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-rpt-purple mr-2">5</span>
-                        <span>Second-suit run</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-rpt-purple mr-2">1-4</span>
-                        <span>Points for balls pocketed</span>
+                        <span className="text-rpt-purple mr-2">10</span>
+                        <span>Points per ball (incomplete run)</span>
                       </li>
                     </ul>
                   </div>
