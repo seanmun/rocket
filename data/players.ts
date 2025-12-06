@@ -67,8 +67,8 @@ export const players: Player[] = [
     ranking: 3,
   },
   {
-    id: 'rony-robles',
-    name: 'Rony Robles',
+    id: 'tony-robles',
+    name: 'Tony Robles',
     nickname: '',
     bio: 'Skilled professional with precision positioning and tactical excellence. Consistent performer known for mental toughness and strategic decision-making.',
     hometown: 'New York, NY',
