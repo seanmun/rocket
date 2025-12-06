@@ -18,19 +18,31 @@ export default function MediaPage() {
     setError('');
   };
 
-  const handlePasswordSubmit = (e: React.FormEvent) => {
+  const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Password validation using environment variables
-    const passwords: { [key: string]: string } = {
-      'pitch-1': process.env.NEXT_PUBLIC_PITCH_1_PASSWORD || '',
-      'pitch-2': process.env.NEXT_PUBLIC_PITCH_2_PASSWORD || ''
-    };
+    try {
+      // Server-side password validation via API route
+      const response = await fetch('/api/verify-pitch-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          pitchId: selectedPitch,
+          password: password,
+        }),
+      });
 
-    if (selectedPitch && password === passwords[selectedPitch]) {
-      router.push(`/media/${selectedPitch}`);
-    } else {
-      setError('Incorrect password. Please try again.');
+      const data = await response.json();
+
+      if (data.valid) {
+        router.push(`/media/${selectedPitch}`);
+      } else {
+        setError('Incorrect password. Please try again.');
+      }
+    } catch (error) {
+      setError('An error occurred. Please try again.');
     }
   };
 
