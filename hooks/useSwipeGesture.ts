@@ -11,9 +11,9 @@ interface SwipeGestureOptions {
 export function useSwipeGesture({
   onSwipeLeft,
   onSwipeRight,
-  minSwipeDistance = 50,
+  minSwipeDistance = 150,
   enableHaptic = true,
-  enableVisualFeedback = true,
+  enableVisualFeedback = false,
 }: SwipeGestureOptions) {
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
