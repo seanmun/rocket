@@ -22,13 +22,16 @@ export function SwipeNavigation({ children }: { children: React.ReactNode }) {
   const translateX = swipeDirection === 'right' ? swipeProgress * 100 : 0;
   const opacity = swipeDirection === 'right' ? 1 - (swipeProgress * 0.3) : 1;
 
+  // Only apply transform styles when actively swiping
+  const hasActiveSwipe = swipeProgress > 0;
+
   return (
     <div
-      style={{
+      style={hasActiveSwipe ? {
         transform: `translateX(${translateX}%)`,
         opacity,
-        transition: swipeProgress === 0 ? 'transform 0.3s ease-out, opacity 0.3s ease-out' : 'none',
-      }}
+        transition: 'none',
+      } : undefined}
     >
       {children}
       {/* Edge indicator - shows when starting swipe */}
