@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Youtube, Twitter, Facebook } from 'lucide-react';
 
 export function Footer() {
@@ -9,8 +10,14 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple flex items-center justify-center">
-                <span className="text-white font-heading font-bold text-xl">R</span>
+              <div className="w-10 h-10 flex items-center justify-center">
+                <Image
+                  src="/logos/8ball-rocket.png"
+                  alt="Rocket Pool Tour"
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
               </div>
               <span className="font-heading font-bold text-sm">
                 ROCKET POOL<br />TOUR
