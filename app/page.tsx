@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { PlayerModal } from '@/components/player-modal';
-import { ChevronDown, Trophy, Zap, BarChart3, Users, Calendar } from 'lucide-react';
+import { ChevronDown, Trophy, Zap, BarChart3, Users, Ticket } from 'lucide-react';
 import { getRecentArticles } from '@/data/news';
 import { getUpcomingEvents } from '@/data/events';
 import { getPlayersByRanking } from '@/data/players';
@@ -38,31 +38,34 @@ export default function Home() {
             />
           </div>
 
-          <div className="container mx-auto px-4 text-center relative z-10">
-            {upcomingEvents.length > 0 && (
-              <div className="mb-6">
-                <Link
-                  href="/schedule"
-                  className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-rpt-gray-800 border border-rpt-teal/30 mb-8 hover:border-rpt-teal hover:bg-rpt-gray-700 transition-all group"
-                >
-                  <Calendar className="w-4 h-4 text-rpt-teal group-hover:scale-110 transition-transform" />
-                  <div className="flex items-center gap-2 text-sm">
+          {upcomingEvents.length > 0 && (
+            <Link
+              href="/schedule"
+              className="absolute top-0 left-0 right-0 bg-rpt-gray-800/95 backdrop-blur-sm border-b border-rpt-teal/30 hover:bg-rpt-gray-700/95 transition-all z-20"
+            >
+              <div className="container mx-auto px-4 py-3">
+                <div className="flex items-center justify-between gap-4 text-sm">
+                  <div className="flex items-center gap-2">
                     <span className="text-gray-400">Next Event:</span>
                     <span className="text-rpt-teal font-semibold">{upcomingEvents[0].name}</span>
-                    <span className="text-gray-500">•</span>
-                    <span className="text-gray-300">{upcomingEvents[0].city}, {upcomingEvents[0].state}</span>
-                    <span className="text-gray-500">•</span>
-                    <span className="text-gray-400">
-                      {new Date(upcomingEvents[0].date).toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric',
-                      })}
-                    </span>
                   </div>
-                </Link>
+                  <div className="text-gray-300">
+                    {upcomingEvents[0].city}, {upcomingEvents[0].state}
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-400">
+                    {new Date(upcomingEvents[0].date).toLocaleDateString('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric',
+                    })}
+                    <Ticket className="w-4 h-4 text-rpt-teal" />
+                  </div>
+                </div>
               </div>
-            )}
+            </Link>
+          )}
+
+          <div className="container mx-auto px-4 text-center relative z-10">
 
             <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
               ROCKET POOL TOUR
