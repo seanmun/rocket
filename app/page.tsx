@@ -49,7 +49,7 @@ export default function Home() {
         )}
 
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-rpt-black via-rpt-gray-900 to-rpt-black pt-12 md:pt-0">
+        <section className="relative min-h-0 md:min-h-screen flex items-start md:items-center justify-center bg-gradient-to-b from-rpt-black via-rpt-gray-900 to-rpt-black py-16 md:py-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,166,166,0.1),transparent_50%)]" />
 
           {/* Logo Background */}
