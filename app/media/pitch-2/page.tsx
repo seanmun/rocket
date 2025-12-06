@@ -451,10 +451,10 @@ export default function Pitch1Page() {
   });
 
   return (
-    <div className="min-h-screen bg-rpt-black text-white">
+    <div className="fixed inset-0 bg-rpt-black text-white overflow-hidden">
       {/* Slide Container */}
-      <div className="relative h-screen flex items-center justify-center p-8">
-        <div ref={contentRef} className="max-w-6xl w-full overflow-y-auto max-h-[calc(100vh-120px)]">
+      <div className="relative h-full flex items-center justify-center p-4 md:p-8">
+        <div ref={contentRef} className="max-w-6xl w-full h-full overflow-y-auto pb-24 pt-16">
           {slides[currentSlide].content}
         </div>
 
@@ -507,16 +507,16 @@ export default function Pitch1Page() {
         </div>
 
         {/* Slide Counter */}
-        <div className="absolute top-8 right-8 text-sm text-gray-400">
+        <div className="absolute top-4 right-4 md:top-8 md:right-8 text-sm text-gray-400">
           {currentSlide + 1} / {slides.length}
         </div>
 
         {/* Exit Button */}
         <a
           href="/media"
-          className="absolute top-8 left-8 p-2 rounded-lg bg-rpt-gray-800 border border-rpt-gray-700 hover:border-rpt-teal transition-all"
+          className="absolute top-4 left-4 md:top-8 md:left-8 p-2 md:p-3 rounded-lg bg-rpt-gray-800/90 backdrop-blur-sm border border-rpt-gray-700 hover:border-rpt-teal transition-all z-50"
         >
-          <X size={20} />
+          <X size={20} className="md:w-6 md:h-6" />
         </a>
       </div>
     </div>
