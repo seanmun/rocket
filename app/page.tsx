@@ -39,11 +39,30 @@ export default function Home() {
           </div>
 
           <div className="container mx-auto px-4 text-center relative z-10">
-            <div className="mb-6">
-              <div className="inline-block px-4 py-2 rounded-full bg-rpt-gray-800 border border-rpt-teal/30 mb-8">
-                <span className="text-rpt-teal text-sm font-medium">Season One • Q2 2026</span>
+            {upcomingEvents.length > 0 && (
+              <div className="mb-6">
+                <Link
+                  href="/schedule"
+                  className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-rpt-gray-800 border border-rpt-teal/30 mb-8 hover:border-rpt-teal hover:bg-rpt-gray-700 transition-all group"
+                >
+                  <Calendar className="w-4 h-4 text-rpt-teal group-hover:scale-110 transition-transform" />
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-gray-400">Next Event:</span>
+                    <span className="text-rpt-teal font-semibold">{upcomingEvents[0].name}</span>
+                    <span className="text-gray-500">•</span>
+                    <span className="text-gray-300">{upcomingEvents[0].city}, {upcomingEvents[0].state}</span>
+                    <span className="text-gray-500">•</span>
+                    <span className="text-gray-400">
+                      {new Date(upcomingEvents[0].date).toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric',
+                      })}
+                    </span>
+                  </div>
+                </Link>
               </div>
-            </div>
+            )}
 
             <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
               ROCKET POOL TOUR
