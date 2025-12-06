@@ -33,7 +33,7 @@ export function Navigation() {
               height={40}
               className="object-contain"
             />
-            <span className="font-heading font-bold text-lg hidden sm:block">
+            <span className="font-heading font-bold text-sm sm:text-lg">
               ROCKET POOL TOUR
             </span>
           </Link>

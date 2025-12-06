@@ -3,14 +3,30 @@
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { Download, Mail, Phone, FileText, Lock } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { useSwipeGesture } from '@/hooks/useSwipeGesture';
 
 export default function MediaPage() {
   const router = useRouter();
   const [selectedPitch, setSelectedPitch] = useState<string | null>(null);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  // Swipe to go back to home
+  useSwipeGesture({
+    onSwipeRight: () => {
+      if (selectedPitch) {
+        // Close modal if open
+        setSelectedPitch(null);
+        setPassword('');
+        setError('');
+      } else {
+        // Go back in browser history
+        router.back();
+      }
+    },
+  });
 
   const handlePitchAccess = (pitchId: string) => {
     setSelectedPitch(pitchId);
