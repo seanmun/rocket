@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { PlayerModal } from '@/components/player-modal';
-import { ChevronDown, Trophy, Zap, BarChart3, Users, Ticket } from 'lucide-react';
+import { ChevronDown, Trophy, Zap, BarChart3, Users, Ticket, Calendar } from 'lucide-react';
 import { getRecentArticles } from '@/data/news';
 import { getUpcomingEvents } from '@/data/events';
 import { getPlayersByRanking } from '@/data/players';
