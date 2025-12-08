@@ -62,14 +62,14 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-rpt-gray-700">
-            <div className="flex flex-col space-y-3">
+          <div className="lg:hidden absolute right-0 top-16 w-3/4 bg-rpt-gray-900/95 backdrop-blur-sm border-b border-l border-rpt-gray-700 py-6">
+            <div className="flex flex-col space-y-4 px-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-sm font-medium text-gray-300 hover:text-rpt-teal transition-colors py-2"
+                  className="text-base font-medium text-gray-300 hover:text-rpt-teal transition-colors py-2"
                 >
                   {link.label}
                 </Link>

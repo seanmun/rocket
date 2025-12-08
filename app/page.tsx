@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { PlayerModal } from '@/components/player-modal';
+import { EmailSignup } from '@/components/email-signup';
 import { ChevronDown, Trophy, Zap, BarChart3, Users, Ticket, Calendar } from 'lucide-react';
 import { getRecentArticles } from '@/data/news';
 import { getUpcomingEvents } from '@/data/events';
@@ -15,7 +16,7 @@ import { useState } from 'react';
 export default function Home() {
   const recentNews = getRecentArticles(3);
   const upcomingEvents = getUpcomingEvents().slice(0, 3);
-  const topPlayers = getPlayersByRanking().slice(0, 6);
+  const topPlayers = getPlayersByRanking().slice(0, 3);
   const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
 
   return (
@@ -47,6 +48,21 @@ export default function Home() {
             </div>
           </Link>
         )}
+
+        {/* Signup Promotion Banner */}
+        <button
+          onClick={() => {
+            document.getElementById('email-signup')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }}
+          className="block w-full bg-gradient-to-r from-rpt-purple/20 to-rpt-teal/20 border-b border-rpt-purple/30 hover:from-rpt-purple/30 hover:to-rpt-teal/30 transition-all"
+        >
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-sm text-center">
+              <span className="text-gray-300">Get exclusive updates, early ticket access & behind-the-scenes content</span>
+              <span className="text-rpt-purple font-semibold whitespace-nowrap">→ Sign Up</span>
+            </div>
+          </div>
+        </button>
 
         {/* Hero Section */}
         <section className="relative min-h-0 md:min-h-[85vh] flex items-start md:items-center justify-center bg-gradient-to-b from-rpt-black via-rpt-gray-900 to-rpt-black py-16 md:py-0">
@@ -276,26 +292,28 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
-              {topPlayers.map((player) => (
-                <button
-                  key={player.id}
-                  onClick={() => setSelectedPlayer(player)}
-                  className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-purple transition-all text-center group cursor-pointer w-full"
-                >
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple mb-4 mx-auto flex items-center justify-center group-hover:glow-purple transition-all">
-                    <Users size={32} className="text-white" />
-                  </div>
-                  <h3 className="font-heading font-bold text-sm mb-1">{player.name}</h3>
-                  {player.nickname && (
-                    <p className="text-xs text-rpt-teal mb-2">"{player.nickname}"</p>
-                  )}
-                  <p className="text-xs text-gray-400">Rank #{player.ranking}</p>
-                  <div className="mt-3 text-xs text-rpt-teal group-hover:text-rpt-teal-light transition-colors">
-                    View Stats →
-                  </div>
-                </button>
-              ))}
+            <div className="flex justify-center mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl w-full">
+                {topPlayers.map((player) => (
+                  <button
+                    key={player.id}
+                    onClick={() => setSelectedPlayer(player)}
+                    className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-purple transition-all text-center group cursor-pointer w-full"
+                  >
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple mb-4 mx-auto flex items-center justify-center group-hover:glow-purple transition-all">
+                      <Users size={32} className="text-white" />
+                    </div>
+                    <h3 className="font-heading font-bold text-sm mb-1">{player.name}</h3>
+                    <p className="text-xs text-rpt-teal mb-2">
+                      {player.nickname ? `"${player.nickname}"` : '\u00A0'}
+                    </p>
+                    <p className="text-xs text-gray-400">Rank #{player.ranking}</p>
+                    <div className="mt-3 text-xs text-rpt-teal group-hover:text-rpt-teal-light transition-colors">
+                      View Stats →
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="text-center">
@@ -350,6 +368,15 @@ export default function Home() {
               >
                 All News
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Email Signup Section */}
+        <section id="email-signup" className="py-24 bg-rpt-gray-900">
+          <div className="container mx-auto px-4">
+            <div className="max-w-xl mx-auto">
+              <EmailSignup />
             </div>
           </div>
         </section>

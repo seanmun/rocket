@@ -55,12 +55,7 @@ export function PlayerModal({ player, isOpen, onClose }: PlayerModalProps) {
               </span>
             </div>
             <div className="flex-1">
-              <div className="flex items-center gap-3 mb-2">
-                <h2 className="font-heading font-bold text-3xl">{player.name}</h2>
-                <div className="px-3 py-1 rounded-full bg-rpt-purple/20 border border-rpt-purple/30">
-                  <span className="text-rpt-purple text-sm font-bold">RANK #{player.ranking}</span>
-                </div>
-              </div>
+              <h2 className="font-heading font-bold text-3xl mb-2">{player.name}</h2>
               {player.nickname && (
                 <p className="text-xl text-rpt-teal mb-3">"{player.nickname}"</p>
               )}
@@ -74,6 +69,8 @@ export function PlayerModal({ player, isOpen, onClose }: PlayerModalProps) {
                   <Award size={16} className="text-rpt-purple" />
                   <span>Tour Card #{player.tourCard}</span>
                 </div>
+                <span>•</span>
+                <span>Rank #{player.ranking}</span>
               </div>
             </div>
           </div>
