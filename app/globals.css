@@ -10,9 +10,9 @@
   --color-rpt-blue-dark: #003459;
   --color-rpt-blue-light: #0066CC;
 
-  --color-rpt-purple: #7F41FF;
-  --color-rpt-purple-dark: #6B2FE8;
-  --color-rpt-purple-light: #A05CFF;
+  --color-rpt-purple: #1E40AF;
+  --color-rpt-purple-dark: #1E3A8A;
+  --color-rpt-purple-light: #3B82F6;
 
   --color-rpt-aqua: #4DF8FF;
   --color-rpt-yellow: #FFDA3A;
@@ -54,7 +54,7 @@ html {
 }
 
 .glow-purple {
-  box-shadow: 0 0 20px rgba(127, 65, 255, 0.5);
+  box-shadow: 0 0 20px rgba(30, 64, 175, 0.5);
 }
 
 .glow-aqua {
