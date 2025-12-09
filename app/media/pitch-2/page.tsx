@@ -181,63 +181,87 @@ const slides = [
     title: 'ELEVATING THE NVIDIA BRAND',
     content: (
       <div className="space-y-4">
-        <h2 className="font-heading font-bold text-4xl mb-6">Elevating the NVIDIA Brand</h2>
+        <h2 className="font-heading font-bold text-4xl mb-4 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
+          Elevating the NVIDIA Brand
+        </h2>
 
-        {/* Partnership Visual */}
-        <div className="flex items-center justify-center gap-8 mb-6">
-          <div className="w-24 h-24 flex items-center justify-center">
-            <Image
-              src="/logos/Nvidia_logo.png"
-              alt="NVIDIA"
-              width={96}
-              height={96}
-              className="object-contain"
-            />
-          </div>
-          <div className="text-rpt-teal">
-            <Handshake size={48} strokeWidth={1.5} />
-          </div>
-          <div className="w-24 h-24 flex items-center justify-center">
-            <Image
-              src="/logos/8ball-rocket.png"
-              alt="Rocket Pool Tour"
-              width={96}
-              height={96}
-              className="object-contain"
-            />
-          </div>
-        </div>
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Left Column - Image */}
+          <div className="space-y-3">
+            {/* Partnership Visual */}
+            <div className="flex items-center justify-center gap-6 mb-3">
+              <div className="w-20 h-20 flex items-center justify-center">
+                <Image
+                  src="/logos/Nvidia_logo.png"
+                  alt="NVIDIA"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+              <div className="text-rpt-teal">
+                <Handshake size={40} strokeWidth={1.5} />
+              </div>
+              <div className="w-20 h-20 flex items-center justify-center">
+                <Image
+                  src="/logos/8ball-rocket.png"
+                  alt="Rocket Pool Tour"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-        <div className="space-y-3">
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
-            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-teal">Premium Sports Positioning</h3>
-            <p className="text-gray-300 text-sm">
-              New positioning akin to <span className="font-bold">Budweiser (NASCAR), Rolex (America's Cup), FedEx (PGA)</span>—solidifying NVIDIA as the technology leader for a modernized, global pool tour.
-            </p>
+            {/* Sponsor Image */}
+            <div className="relative rounded-lg overflow-hidden border-2 border-rpt-teal/30 shadow-[0_0_30px_rgba(0,166,166,0.2)]">
+              <Image
+                src="/images/nvidia-sponsors.png"
+                alt="NVIDIA Sponsorship on RPT Uniforms"
+                width={600}
+                height={400}
+                className="object-cover w-full"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-rpt-black/60 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 text-center">
+                <p className="text-xs text-white font-semibold drop-shadow-lg">NVIDIA Brand Integration</p>
+              </div>
+            </div>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-purple/30">
-            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-purple">Official Partnership Status</h3>
-            <p className="text-gray-300 text-xl font-bold">
-              "NVIDIA, the Official Technology Partner of the RPT"
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-aqua/30">
-            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-aqua">Content & Influencer Expansion</h3>
-            <p className="text-gray-300 text-sm">
-              Long-term content series and influencer integrations designed to engage fans across all platforms.
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-yellow/30">
-            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-yellow">Expanding Reach & Demographics</h3>
-            <p className="text-gray-300 text-sm">
-              Expanding reach and new demographics with a wider global audience through a new entertainment and sport crossover. Offering NVIDIA new inventory across <span className="font-bold">TV, digital, app, and social media platforms</span>.
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
-            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-teal">Brand Visibility</h3>
-            <p className="text-gray-300 text-sm">
-              Logos, marketing materials, players jerseys, venue signage, on-site and digital branding.
-            </p>
+
+          {/* Right Column - Benefits */}
+          <div className="space-y-2">
+            <div className="bg-rpt-gray-800 rounded-lg p-3 border border-rpt-teal/30">
+              <h3 className="font-heading font-bold text-base mb-1 text-rpt-teal">Premium Sports Positioning</h3>
+              <p className="text-gray-300 text-xs">
+                New positioning akin to <span className="font-bold">Budweiser (NASCAR), Rolex (America's Cup), FedEx (PGA)</span>—solidifying NVIDIA as the technology leader for a modernized, global pool tour.
+              </p>
+            </div>
+            <div className="bg-rpt-gray-800 rounded-lg p-3 border border-rpt-purple/30">
+              <h3 className="font-heading font-bold text-base mb-1 text-rpt-purple">Official Partnership Status</h3>
+              <p className="text-gray-300 text-lg font-bold">
+                "NVIDIA, the Official Technology Partner of the RPT"
+              </p>
+            </div>
+            <div className="bg-rpt-gray-800 rounded-lg p-3 border border-rpt-aqua/30">
+              <h3 className="font-heading font-bold text-base mb-1 text-rpt-aqua">Content & Influencer Expansion</h3>
+              <p className="text-gray-300 text-xs">
+                Long-term content series and influencer integrations designed to engage fans across all platforms.
+              </p>
+            </div>
+            <div className="bg-rpt-gray-800 rounded-lg p-3 border border-rpt-yellow/30">
+              <h3 className="font-heading font-bold text-base mb-1 text-rpt-yellow">Expanding Reach & Demographics</h3>
+              <p className="text-gray-300 text-xs">
+                Expanding reach and new demographics with a wider global audience through a new entertainment and sport crossover. Offering NVIDIA new inventory across <span className="font-bold">TV, digital, app, and social media platforms</span>.
+              </p>
+            </div>
+            <div className="bg-rpt-gray-800 rounded-lg p-3 border border-rpt-teal/30">
+              <h3 className="font-heading font-bold text-base mb-1 text-rpt-teal">Brand Visibility</h3>
+              <p className="text-gray-300 text-xs">
+                Logos, marketing materials, players jerseys, venue signage, on-site and digital branding.
+              </p>
+            </div>
           </div>
         </div>
       </div>
