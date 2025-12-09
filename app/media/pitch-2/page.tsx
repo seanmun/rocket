@@ -180,62 +180,62 @@ const slides = [
     id: 7,
     title: 'ELEVATING THE NVIDIA BRAND',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">Elevating the NVIDIA Brand</h2>
+      <div className="space-y-4">
+        <h2 className="font-heading font-bold text-4xl mb-6">Elevating the NVIDIA Brand</h2>
 
         {/* Partnership Visual */}
-        <div className="flex items-center justify-center gap-8 mb-8">
-          <div className="w-32 h-32 flex items-center justify-center">
+        <div className="flex items-center justify-center gap-8 mb-6">
+          <div className="w-24 h-24 flex items-center justify-center">
             <Image
               src="/logos/Nvidia_logo.png"
               alt="NVIDIA"
-              width={128}
-              height={128}
+              width={96}
+              height={96}
               className="object-contain"
             />
           </div>
           <div className="text-rpt-teal">
-            <Handshake size={64} strokeWidth={1.5} />
+            <Handshake size={48} strokeWidth={1.5} />
           </div>
-          <div className="w-32 h-32 flex items-center justify-center">
+          <div className="w-24 h-24 flex items-center justify-center">
             <Image
               src="/logos/8ball-rocket.png"
               alt="Rocket Pool Tour"
-              width={128}
-              height={128}
+              width={96}
+              height={96}
               className="object-contain"
             />
           </div>
         </div>
 
-        <div className="space-y-4">
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-teal">Premium Sports Positioning</h3>
-            <p className="text-gray-300">
+        <div className="space-y-3">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-teal">Premium Sports Positioning</h3>
+            <p className="text-gray-300 text-sm">
               New positioning akin to <span className="font-bold">Budweiser (NASCAR), Rolex (America's Cup), FedEx (PGA)</span>—solidifying NVIDIA as the technology leader for a modernized, global pool tour.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-purple/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-purple">Official Partnership Status</h3>
-            <p className="text-gray-300 text-2xl font-bold">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-purple/30">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-purple">Official Partnership Status</h3>
+            <p className="text-gray-300 text-xl font-bold">
               "NVIDIA, the Official Technology Partner of the RPT"
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-aqua/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-aqua">Content & Influencer Expansion</h3>
-            <p className="text-gray-300">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-aqua/30">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-aqua">Content & Influencer Expansion</h3>
+            <p className="text-gray-300 text-sm">
               Long-term content series and influencer integrations designed to engage fans across all platforms.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-yellow/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-yellow">Expanding Reach & Demographics</h3>
-            <p className="text-gray-300 mb-3">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-yellow/30">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-yellow">Expanding Reach & Demographics</h3>
+            <p className="text-gray-300 text-sm">
               Expanding reach and new demographics with a wider global audience through a new entertainment and sport crossover. Offering NVIDIA new inventory across <span className="font-bold">TV, digital, app, and social media platforms</span>.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-teal">Brand Visibility</h3>
-            <p className="text-gray-300">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-teal">Brand Visibility</h3>
+            <p className="text-gray-300 text-sm">
               Logos, marketing materials, players jerseys, venue signage, on-site and digital branding.
             </p>
           </div>
@@ -247,42 +247,42 @@ const slides = [
     id: 8,
     title: 'ADVANTAGES',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">Advantages</h2>
-        <div className="space-y-4">
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
-            <h4 className="font-bold text-rpt-teal mb-3 text-lg">Broadcast App & RTX Studio Promotion</h4>
-            <p className="text-gray-300">
+      <div className="space-y-4">
+        <h2 className="font-heading font-bold text-4xl mb-6">Advantages</h2>
+        <div className="space-y-3">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
+            <h4 className="font-bold text-rpt-teal mb-2 text-lg">Broadcast App & RTX Studio Promotion</h4>
+            <p className="text-gray-300 text-sm">
               NVIDIA can promote their <span className="font-bold">Broadcast App and RTX Studio tools</span> to content creators, streamers, and production staff associated with the RPT.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-purple/30">
-            <h4 className="font-bold text-rpt-purple mb-3 text-lg">Exclusive Game Format & IP Ownership</h4>
-            <p className="text-gray-300">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-purple/30">
+            <h4 className="font-bold text-rpt-purple mb-2 text-lg">Exclusive Game Format & IP Ownership</h4>
+            <p className="text-gray-300 text-sm">
               RPT will be the <span className="font-bold">only Professional Pool Tour</span> that has Rocket Run-Out being played, as RPT owns the intellectual property for the games and scoring system.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-aqua/30">
-            <h4 className="font-bold text-rpt-aqua mb-3 text-lg">Official Tech Partner Status</h4>
-            <p className="text-gray-300">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-aqua/30">
+            <h4 className="font-bold text-rpt-aqua mb-2 text-lg">Official Tech Partner Status</h4>
+            <p className="text-gray-300 text-sm">
               Position NVIDIA as the <span className="font-bold">Official Tech Partner of the Rocket Pool Tour©</span>.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-yellow/30">
-            <h4 className="font-bold text-rpt-yellow mb-3 text-lg">Live Event Engagement</h4>
-            <p className="text-gray-300">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-yellow/30">
+            <h4 className="font-bold text-rpt-yellow mb-2 text-lg">Live Event Engagement</h4>
+            <p className="text-gray-300 text-sm">
               Live tournaments, trade shows, and promotions create interactive fan engagement. NVIDIA can layer in <span className="font-bold">VIP meet and greets with on-site product showcasing and demos</span>.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
-            <h4 className="font-bold text-rpt-teal mb-3 text-lg">Generative AI & Content Creation</h4>
-            <p className="text-gray-300">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
+            <h4 className="font-bold text-rpt-teal mb-2 text-lg">Generative AI & Content Creation</h4>
+            <p className="text-gray-300 text-sm">
               Use <span className="font-bold">generative AI (running on NVIDIA hardware)</span> to automatically create high-quality social media clips tied to specific in-game moments. (<span className="italic">"NVIDIA Precision Shot of the DAY"</span>)
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-purple/30">
-            <h4 className="font-bold text-rpt-purple mb-3 text-lg">Multi-Platform Showcase</h4>
-            <p className="text-gray-300">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-purple/30">
+            <h4 className="font-bold text-rpt-purple mb-2 text-lg">Multi-Platform Showcase</h4>
+            <p className="text-gray-300 text-sm">
               Showcase NVIDIA across new RPT formats: <span className="font-bold">digital, TV, live events, apps, and social media</span>, providing a fresh, and engaging experience for the audience, while growing revenue for NVIDIA through ad content.
             </p>
           </div>
