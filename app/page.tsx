@@ -98,9 +98,9 @@ export default function Home() {
               <Image
                 src="/logos/rpt-logo-square.png"
                 alt="Rocket Pool Tour"
-                width={200}
-                height={200}
-                className="object-contain w-40 md:w-52 lg:w-64"
+                width={300}
+                height={300}
+                className="object-contain w-52 md:w-64 lg:w-80"
                 priority
               />
             </div>
