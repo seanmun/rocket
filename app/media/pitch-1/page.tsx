@@ -205,11 +205,12 @@ const slides = [
               </div>
               <div className="w-24 h-24 flex items-center justify-center">
                 <Image
-                  src="/logos/rpt-logo-lg.png"
+                  src="/logos/rpt-logo-square.png"
                   alt="Rocket Pool Tour"
                   width={96}
                   height={96}
                   className="object-contain"
+                  style={{ filter: 'drop-shadow(-2px 0px 8px rgba(255, 255, 255, 0.3))' }}
                 />
               </div>
             </div>

@@ -98,11 +98,12 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/logos/rpt-sq-icon.png"
+              src="/logos/rpt-logo-square.png"
               alt="Rocket Pool Tour"
               width={40}
               height={40}
               className="object-contain"
+              style={{ filter: 'drop-shadow(-2px 0px 8px rgba(255, 255, 255, 0.3))' }}
             />
             <span className="font-heading font-bold text-sm sm:text-lg">
               ROCKET POOL TOUR
