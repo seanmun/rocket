@@ -180,57 +180,57 @@ const slides = [
     id: 7,
     title: 'ELEVATING THE DRAFTKINGS BRAND',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">Elevating the DraftKings Brand</h2>
+      <div className="space-y-4">
+        <h2 className="font-heading font-bold text-4xl mb-6">Elevating the DraftKings Brand</h2>
 
         {/* Partnership Visual */}
-        <div className="flex items-center justify-center gap-8 mb-8">
-          <div className="w-32 h-32 flex items-center justify-center">
+        <div className="flex items-center justify-center gap-8 mb-6">
+          <div className="w-24 h-24 flex items-center justify-center">
             <Image
               src="/logos/DraftKings_logo.png"
               alt="DraftKings"
-              width={128}
-              height={128}
+              width={96}
+              height={96}
               className="object-contain"
             />
           </div>
           <div className="text-rpt-teal">
-            <Handshake size={64} strokeWidth={1.5} />
+            <Handshake size={48} strokeWidth={1.5} />
           </div>
-          <div className="w-32 h-32 flex items-center justify-center">
+          <div className="w-24 h-24 flex items-center justify-center">
             <Image
               src="/logos/8ball-rocket.png"
               alt="Rocket Pool Tour"
-              width={128}
-              height={128}
+              width={96}
+              height={96}
               className="object-contain"
             />
           </div>
         </div>
 
-        <div className="space-y-4">
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-teal">Premium Sports Positioning</h3>
-            <p className="text-gray-300">
+        <div className="space-y-3">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-teal">Premium Sports Positioning</h3>
+            <p className="text-gray-300 text-sm">
               Aligning DraftKings with iconic sponsorship models such as <span className="font-bold">Budweiser (NASCAR), Rolex (America's Cup), and FedEx (PGA)</span>—solidifying DraftKings as the premier betting partner for a modernized, global pool tour.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-purple/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-purple">Official Partnership Status</h3>
-            <p className="text-gray-300 text-2xl font-bold">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-purple/30">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-purple">Official Partnership Status</h3>
+            <p className="text-gray-300 text-xl font-bold">
               "DraftKings — Official Betting Partner of the Rocket Pool Tour."
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-aqua/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-aqua">Content & Influencer Expansion</h3>
-            <p className="text-gray-300">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-aqua/30">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-aqua">Content & Influencer Expansion</h3>
+            <p className="text-gray-300 text-sm">
               Development of long-term content series, behind-the-scenes features, and influencer-driven integrations designed to engage fans across all platforms.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-yellow/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-yellow">Brand Visibility Opportunities</h3>
-            <p className="text-gray-300 mb-3">High-impact branding placements including:</p>
-            <ul className="space-y-1 text-gray-300 text-sm">
+          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-yellow/30">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-yellow">Brand Visibility Opportunities</h3>
+            <p className="text-gray-300 mb-2 text-sm">High-impact branding placements including:</p>
+            <ul className="space-y-1 text-gray-300 text-xs">
               <li>• Logos on-screen and in marketing materials</li>
               <li>• <span className="font-bold">Player jerseys</span></li>
               <li>• <span className="font-bold">Venue signage</span></li>
@@ -245,14 +245,14 @@ const slides = [
     id: 8,
     title: 'ADVANTAGES',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">Advantages</h2>
-        <div className="space-y-4">
-          <div className="bg-gradient-to-br from-rpt-purple/20 to-rpt-teal/20 rounded-lg p-8 border border-rpt-purple/30 mb-6">
+      <div className="space-y-4">
+        <h2 className="font-heading font-bold text-4xl mb-6">Advantages</h2>
+        <div className="space-y-3">
+          <div className="bg-gradient-to-br from-rpt-purple/20 to-rpt-teal/20 rounded-lg p-6 border border-rpt-purple/30">
             <p className="text-3xl font-heading font-bold text-center mb-2">52,800</p>
-            <p className="text-xl text-gray-300 text-center">Unique betting possibilities per full season</p>
+            <p className="text-lg text-gray-300 text-center">Unique betting possibilities per full season</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
               <h4 className="font-bold text-rpt-teal mb-2">New Sports Audience</h4>
               <p className="text-sm text-gray-300">Access to a passionate, underserved market</p>
