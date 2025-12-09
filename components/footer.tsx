@@ -12,7 +12,7 @@ export function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 flex items-center justify-center">
                 <Image
-                  src="/logos/8ball-rocket.png"
+                  src="/logos/rpt-sq-icon.png"
                   alt="Rocket Pool Tour"
                   width={40}
                   height={40}
