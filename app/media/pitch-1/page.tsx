@@ -12,7 +12,7 @@ const slides = [
     title: 'MISSION',
     content: (
       <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">Mission</h2>
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Mission</h2>
         <div className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-purple/30">
           <p className="text-xl text-gray-300 leading-relaxed">
             The Rocket Pool Tour (RPT) exists to engage, inspire, and positively impact fans, partners, and communities worldwide by showcasing the greatest talents in professional pool. The Tour promotes the sport by sanctioning tournaments and supporting its members' professional growth and interests.
@@ -26,7 +26,7 @@ const slides = [
     title: 'FOUNDERS',
     content: (
       <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">Founders</h2>
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Founders</h2>
 
         {/* Founder Photos */}
         <div className="flex justify-start gap-8 mb-8">
@@ -77,7 +77,7 @@ const slides = [
     title: 'THIS IS THE RPT',
     content: (
       <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">This Is the RPT</h2>
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">This Is the RPT</h2>
         <div className="bg-gradient-to-br from-rpt-purple/20 to-rpt-teal/20 rounded-lg p-8 border border-rpt-purple/30 mb-6">
           <p className="text-2xl text-gray-300 mb-4">
             The <span className="text-rpt-teal font-bold">Rocket Pool Tour (RPT)</span> is a new and dynamic professional billiards tour built around the fast‑paced, all‑offense <span className="text-rpt-purple font-bold">Rocket Run-Out©</span> format.
@@ -112,7 +112,7 @@ const slides = [
     title: 'THE TOUR',
     content: (
       <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">The Tour</h2>
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">The Tour</h2>
         <div className="grid grid-cols-1 gap-6">
           <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
             <h3 className="font-heading font-bold text-xl mb-3 text-rpt-teal">Projected Launch</h3>
@@ -146,7 +146,7 @@ const slides = [
     title: 'WHAT THE RPT OFFERS',
     content: (
       <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">What the Rocket Pool Tour Offers</h2>
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">What the Rocket Pool Tour Offers</h2>
         <div className="space-y-4">
           <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
             <h3 className="font-heading font-bold text-xl mb-3 text-rpt-teal">A New Pool Experience</h3>
@@ -270,7 +270,7 @@ const slides = [
     title: 'ADVANTAGES',
     content: (
       <div className="space-y-4">
-        <h2 className="font-heading font-bold text-4xl mb-6">Advantages</h2>
+        <h2 className="font-heading font-bold text-5xl mb-6 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Advantages</h2>
         <div className="space-y-3">
           <div className="bg-gradient-to-br from-rpt-purple/20 to-rpt-teal/20 rounded-lg p-6 border border-rpt-purple/30">
             <p className="text-3xl font-heading font-bold text-center mb-2">52,800</p>
@@ -303,7 +303,7 @@ const slides = [
     title: 'PARTNERSHIP OPPORTUNITY',
     content: (
       <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">Partnership Opportunity</h2>
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Partnership Opportunity</h2>
         <div className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-purple/30">
           <div className="space-y-6 text-gray-300">
             <div>
@@ -337,7 +337,7 @@ const slides = [
     title: 'OFFER DETAILS',
     content: (
       <div className="space-y-8">
-        <h2 className="font-heading font-bold text-5xl mb-8">Offer Details</h2>
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Offer Details</h2>
         <div className="bg-gradient-to-br from-rpt-purple/20 to-rpt-teal/20 rounded-lg p-12 border border-rpt-purple/30">
           <div className="space-y-8">
             <div>
@@ -366,7 +366,7 @@ const slides = [
     title: 'CONCLUSION',
     content: (
       <div className="text-center space-y-8">
-        <h2 className="font-heading font-bold text-5xl mb-8">Let's Build the Future Together</h2>
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Let's Build the Future Together</h2>
         <div className="bg-gradient-to-br from-rpt-purple/20 to-rpt-teal/20 rounded-lg p-12 border border-rpt-purple/30 max-w-4xl mx-auto">
           <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
             The Rocket Pool Tour© aligns naturally with DraftKings by engaging a shared core demographic of <span className="font-bold text-rpt-teal">sports enthusiasts ages 21–40</span>—an audience with disposable income, a passion for competition, and strong interest in immersive, social forms of entertainment.
