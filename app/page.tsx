@@ -58,7 +58,7 @@ export default function Home() {
         >
           <div className="container mx-auto px-4 py-3">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-sm text-center">
-              <span className="text-gray-300">Get exclusive updates, early ticket access & behind-the-scenes content</span>
+              <span className="text-gray-300">Get updates, exclusive content, and early access to tickets</span>
               <span className="text-rpt-teal font-semibold whitespace-nowrap">→ Sign Up</span>
             </div>
           </div>
@@ -121,13 +121,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/format"
-                className="px-8 py-4 bg-rpt-yellow hover:bg-rpt-yellow/90 text-rpt-black font-heading font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(255,218,58,0.3)] hover:shadow-[0_0_30px_rgba(255,218,58,0.5)]"
+                className="px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
               >
                 Learn About Rocket Run-Out©
               </Link>
               <Link
                 href="/schedule"
-                className="px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
+                className="px-8 py-4 bg-rpt-blue-dark hover:bg-rpt-blue text-white font-heading font-bold rounded-lg transition-all"
               >
                 View Schedule
               </Link>
