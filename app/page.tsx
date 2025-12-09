@@ -68,18 +68,16 @@ export default function Home() {
         <section className="relative min-h-0 md:min-h-[85vh] flex items-start md:items-center justify-center bg-gradient-to-b from-rpt-black via-rpt-gray-900 to-rpt-black py-16 md:py-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,166,166,0.1),transparent_50%)]" />
 
-          {/* Video Background */}
+          {/* Background */}
           <div className="absolute inset-0 flex items-center justify-center opacity-[0.15] overflow-hidden">
-            {/* Mobile Video - background2 */}
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
+            {/* Mobile Image - background.png */}
+            <Image
+              src="/images/background.png"
+              alt=""
+              width={800}
+              height={800}
               className="w-[80%] h-auto object-contain md:hidden"
-            >
-              <source src="/videos/background2.mp4" type="video/mp4" />
-            </video>
+            />
             {/* Desktop Video - background3 */}
             <video
               autoPlay
