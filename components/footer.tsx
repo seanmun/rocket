@@ -12,11 +12,12 @@ export function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 flex items-center justify-center">
                 <Image
-                  src="/logos/rpt-sq-icon.png"
+                  src="/logos/rpt-logo-square.png"
                   alt="Rocket Pool Tour"
                   width={40}
                   height={40}
                   className="object-contain"
+                  style={{ filter: 'drop-shadow(-2px 0px 8px rgba(255, 255, 255, 0.3))' }}
                 />
               </div>
               <span className="font-heading font-bold text-sm">

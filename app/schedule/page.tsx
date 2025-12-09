@@ -81,7 +81,7 @@ export default function SchedulePage() {
                             </div>
                             {event.week === 15 && (
                               <div className="px-3 py-1 rounded-full bg-rpt-purple/20 border border-rpt-purple/30">
-                                <span className="text-rpt-purple text-sm font-bold">CHAMPIONSHIP</span>
+                                <span className="text-rpt-yellow text-sm font-bold">CHAMPIONSHIP</span>
                               </div>
                             )}
                           </div>
@@ -101,7 +101,7 @@ export default function SchedulePage() {
                         <div className="flex flex-row items-start gap-4">
                           <div className="text-left md:text-right">
                             <div className="text-xs md:text-sm text-gray-400 mb-1">Prize Pool</div>
-                            <div className="font-heading font-bold text-lg md:text-xl text-rpt-purple">
+                            <div className="font-heading font-bold text-lg md:text-xl text-rpt-teal">
                               ${event.prizePool.toLocaleString()}
                             </div>
                           </div>
@@ -144,7 +144,7 @@ export default function SchedulePage() {
                   <Trophy className="w-16 h-16 text-rpt-purple mb-4 mx-auto" />
                   <h2 className="font-heading font-bold text-3xl mb-4">Championship Finale</h2>
                   <p className="text-lg text-gray-300 mb-6">
-                    The season culminates at the Wynn Las Vegas with a <span className="text-rpt-purple font-bold">$250,000 prize pool</span> as the top players compete for the inaugural Rocket Pool Tour Championship title.
+                    The season culminates at the Wynn Las Vegas with a <span className="text-rpt-yellow font-bold">$250,000 prize pool</span> as the top players compete for the inaugural Rocket Pool Tour Championship title.
                   </p>
                   <p className="text-gray-400">
                     Points accumulated throughout the season determine seeding and the ultimate Tour Champion.

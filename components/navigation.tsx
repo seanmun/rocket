@@ -22,7 +22,6 @@ export function Navigation() {
     { href: '/schedule', label: 'Schedule' },
     { href: '/players', label: 'Players' },
     { href: '/stats', label: 'Stats' },
-    { href: '/news', label: 'News' },
     { href: '/exhibitors', label: 'Exhibitors' },
     { href: '/contact', label: 'Contact' },
   ];

@@ -17,7 +17,7 @@ export default function FormatPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-block px-4 py-2 rounded-full bg-rpt-gray-800 border border-rpt-purple/30 mb-6">
-                <span className="text-rpt-purple text-sm font-medium">Proprietary Format</span>
+                <span className="text-rpt-teal text-sm font-medium">Proprietary Format</span>
               </div>
               <h1 className="font-heading font-bold text-5xl md:text-6xl mb-6 bg-gradient-to-r from-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
                 Rocket Run-Out©
@@ -39,7 +39,7 @@ export default function FormatPage() {
               <div className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-purple/30">
                 <h2 className="font-heading font-bold text-3xl mb-6">Overview</h2>
                 <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Rocket Run-Out© is part of the <span className="text-rpt-purple font-semibold">Saratoga series</span>—a revolutionary pool format created by World Champion Rodney Morris designed to maximize offensive opportunities, create dramatic scoring moments, and enable accurate statistical tracking.
+                  Rocket Run-Out© is part of the <span className="text-rpt-teal font-semibold">Saratoga series</span>—a revolutionary pool format created by World Champion Rodney Morris designed to maximize offensive opportunities, create dramatic scoring moments, and enable accurate statistical tracking.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
                   This format has been tested and refined over years of development to create the perfect balance between skill, strategy, and entertainment value.

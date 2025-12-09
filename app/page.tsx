@@ -6,7 +6,7 @@ import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { PlayerModal } from '@/components/player-modal';
 import { EmailSignup } from '@/components/email-signup';
-import { ChevronDown, Trophy, Zap, BarChart3, Users, Ticket, Calendar } from 'lucide-react';
+import { ChevronDown, Trophy, Zap, BarChart3, Users, Ticket, Calendar, Building2, TrendingUp } from 'lucide-react';
 import { getRecentArticles } from '@/data/news';
 import { getUpcomingEvents } from '@/data/events';
 import { getPlayersByRanking } from '@/data/players';
@@ -59,7 +59,7 @@ export default function Home() {
           <div className="container mx-auto px-4 py-3">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-sm text-center">
               <span className="text-gray-300">Get exclusive updates, early ticket access & behind-the-scenes content</span>
-              <span className="text-rpt-purple font-semibold whitespace-nowrap">→ Sign Up</span>
+              <span className="text-rpt-teal font-semibold whitespace-nowrap">→ Sign Up</span>
             </div>
           </div>
         </button>
@@ -121,13 +121,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/format"
-                className="px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
+                className="px-8 py-4 bg-rpt-yellow hover:bg-rpt-yellow/90 text-rpt-black font-heading font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(255,218,58,0.3)] hover:shadow-[0_0_30px_rgba(255,218,58,0.5)]"
               >
                 Learn About Rocket Run-Out©
               </Link>
               <Link
                 href="/schedule"
-                className="px-8 py-4 bg-rpt-blue-dark hover:bg-rpt-blue text-white font-heading font-bold rounded-lg transition-all"
+                className="px-8 py-4 bg-rpt-purple hover:bg-rpt-purple-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-purple"
               >
                 View Schedule
               </Link>
@@ -219,22 +219,22 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="font-heading font-bold text-xl mb-4 text-rpt-purple">Scoring</h3>
+                    <h3 className="font-heading font-bold text-xl mb-4 text-rpt-aqua">Scoring</h3>
                     <ul className="space-y-3 text-gray-300">
                       <li className="flex items-start">
-                        <span className="text-rpt-purple mr-2">200</span>
+                        <span className="text-rpt-aqua mr-2">200</span>
                         <span>Break and run</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-rpt-purple mr-2">150</span>
+                        <span className="text-rpt-aqua mr-2">150</span>
                         <span>Dry break and run</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-rpt-purple mr-2">100</span>
+                        <span className="text-rpt-aqua mr-2">100</span>
                         <span>Ball-in-hand run</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-rpt-purple mr-2">10</span>
+                        <span className="text-rpt-aqua mr-2">10</span>
                         <span>Points per ball (incomplete run)</span>
                       </li>
                     </ul>
@@ -351,46 +351,57 @@ export default function Home() {
           </div>
         </section>
 
-        {/* News Section */}
+        {/* Exhibitors Section */}
         <section className="py-24 bg-rpt-gray-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6">
-                Latest News
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-rpt-yellow/20 to-rpt-teal/20 px-4 py-2 rounded-full border border-rpt-yellow/30 mb-4">
+                <Building2 className="w-4 h-4 text-rpt-yellow" />
+                <span className="text-rpt-yellow font-bold text-sm">30 EXHIBITOR SPACES • 10' × 10'</span>
+              </div>
+              <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+                Exhibitor Opportunities
               </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-2">
+                Partner with the future of professional billiards
+              </p>
+              <p className="text-sm text-rpt-teal font-semibold">
+                Early Bird Pricing: 20% discount for the first 10 spaces booked
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {recentNews.map((article) => (
-                <Link
-                  key={article.id}
-                  href={`/news/${article.slug}`}
-                  className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all group"
-                >
-                  <div className="mb-4">
-                    <span className="text-xs font-bold text-rpt-teal uppercase">{article.category}</span>
-                  </div>
-                  <h3 className="font-heading font-bold text-lg mb-3 group-hover:text-rpt-teal transition-colors">
-                    {article.title}
-                  </h3>
-                  <p className="text-sm text-gray-400 mb-4">{article.excerpt}</p>
-                  <p className="text-xs text-gray-500">
-                    {new Date(article.publishedAt).toLocaleDateString('en-US', {
-                      month: 'long',
-                      day: 'numeric',
-                      year: 'numeric',
-                    })}
-                  </p>
-                </Link>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
+              <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all">
+                <Building2 className="w-10 h-10 text-rpt-teal mb-4" />
+                <h3 className="font-heading font-bold text-xl mb-3">Prime Exposure</h3>
+                <p className="text-gray-300">
+                  Position your brand in front of professional players, enthusiasts, and industry leaders
+                </p>
+              </div>
+
+              <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all">
+                <Users className="w-10 h-10 text-rpt-aqua mb-4" />
+                <h3 className="font-heading font-bold text-xl mb-3">Direct Access</h3>
+                <p className="text-gray-300">
+                  Connect directly with a passionate community of pool players and fans
+                </p>
+              </div>
+
+              <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all">
+                <TrendingUp className="w-10 h-10 text-rpt-purple mb-4" />
+                <h3 className="font-heading font-bold text-xl mb-3">Growing Market</h3>
+                <p className="text-gray-300">
+                  Be part of the fastest-growing professional pool tour in the region
+                </p>
+              </div>
             </div>
 
             <div className="text-center">
               <Link
-                href="/news"
-                className="inline-block px-6 py-3 bg-rpt-blue-dark hover:bg-rpt-blue text-white font-heading font-bold rounded-lg transition-all"
+                href="/exhibitors"
+                className="inline-block px-8 py-4 bg-rpt-teal hover:bg-rpt-teal-dark text-white font-heading font-bold rounded-lg transition-all hover:glow-teal"
               >
-                All News
+                Learn More About Exhibiting
               </Link>
             </div>
           </div>
