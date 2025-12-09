@@ -96,7 +96,7 @@ export default function Home() {
             {/* Logo above headline */}
             <div className="mb-8 flex justify-center">
               <Image
-                src="/logos/rpt-logo-lg.png"
+                src="/logos/rft-logo-square.png"
                 alt="Rocket Pool Tour"
                 width={200}
                 height={200}
