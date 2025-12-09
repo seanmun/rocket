@@ -101,6 +101,7 @@ export default function Home() {
                 width={300}
                 height={300}
                 className="object-contain w-52 md:w-64 lg:w-80"
+                style={{ filter: 'drop-shadow(-2px 0px 8px rgba(255, 255, 255, 0.3))' }}
                 priority
               />
             </div>
