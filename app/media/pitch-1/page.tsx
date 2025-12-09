@@ -200,9 +200,6 @@ const slides = [
                   className="object-contain"
                 />
               </div>
-              <div className="text-rpt-teal drop-shadow-[0_0_10px_rgba(0,166,166,0.8)]">
-                <Handshake size={48} strokeWidth={1.5} />
-              </div>
               <div className="w-24 h-24 flex items-center justify-center">
                 <Image
                   src="/logos/rpt-logo-square.png"
