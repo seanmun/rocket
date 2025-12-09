@@ -181,62 +181,62 @@ const slides = [
     title: 'ELEVATING THE DRAFTKINGS BRAND',
     content: (
       <div className="space-y-4">
-        <h2 className="font-heading font-bold text-4xl mb-4 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
+        <h2 className="font-heading font-bold text-5xl mb-4 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">
           Elevating the DraftKings Brand
         </h2>
 
-        {/* Partnership Visual - Centered */}
-        <div className="flex items-center justify-center gap-8 mb-4 bg-gradient-to-r from-rpt-teal/5 via-rpt-purple/10 to-rpt-teal/5 rounded-lg p-6 border border-rpt-teal/20">
-          <div className="w-28 h-28 flex items-center justify-center">
+        {/* Partnership Visual - Enhanced */}
+        <div className="flex items-center justify-center gap-8 mb-4 bg-gradient-to-r from-rpt-teal/10 via-rpt-purple/20 to-rpt-aqua/10 rounded-xl p-6 border border-rpt-teal/30 shadow-[0_0_30px_rgba(0,166,166,0.2)]">
+          <div className="w-32 h-32 flex items-center justify-center">
             <Image
               src="/logos/DraftKings_logo.png"
               alt="DraftKings"
-              width={112}
-              height={112}
+              width={128}
+              height={128}
               className="object-contain"
             />
           </div>
-          <div className="text-rpt-teal">
-            <Handshake size={56} strokeWidth={1.5} />
+          <div className="text-rpt-teal drop-shadow-[0_0_10px_rgba(0,166,166,0.8)]">
+            <Handshake size={64} strokeWidth={1.5} />
           </div>
-          <div className="w-28 h-28 flex items-center justify-center">
+          <div className="w-32 h-32 flex items-center justify-center">
             <Image
-              src="/logos/8ball-rocket.png"
+              src="/logos/rpt-logo-lg.png"
               alt="Rocket Pool Tour"
-              width={112}
-              height={112}
+              width={128}
+              height={128}
               className="object-contain"
             />
           </div>
         </div>
 
-        {/* Two Column Grid */}
+        {/* Two Column Grid - Enhanced */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div className="bg-rpt-gray-800 rounded-lg p-3 border border-rpt-teal/30">
-            <h3 className="font-heading font-bold text-base mb-1 text-rpt-teal">Premium Sports Positioning</h3>
-            <p className="text-gray-300 text-xs">
-              Aligning DraftKings with iconic sponsorship models such as <span className="font-bold">Budweiser (NASCAR), Rolex (America's Cup), and FedEx (PGA)</span>—solidifying DraftKings as the premier betting partner for a modernized, global pool tour.
+          <div className="bg-gradient-to-br from-rpt-teal/20 via-rpt-teal/10 to-transparent rounded-lg p-4 border border-rpt-teal/40 shadow-[0_0_20px_rgba(0,166,166,0.15)]">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-teal drop-shadow-[0_0_8px_rgba(0,166,166,0.6)]">Premium Sports Positioning</h3>
+            <p className="text-gray-200 text-sm font-medium">
+              Aligning DraftKings with iconic sponsorship models such as <span className="font-bold text-white">Budweiser (NASCAR), Rolex (America's Cup), and FedEx (PGA)</span>—solidifying DraftKings as the premier betting partner for a modernized, global pool tour.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-3 border border-rpt-purple/30">
-            <h3 className="font-heading font-bold text-base mb-1 text-rpt-purple">Official Partnership Status</h3>
-            <p className="text-gray-300 text-lg font-bold">
+          <div className="bg-gradient-to-br from-rpt-purple/20 via-rpt-purple/10 to-transparent rounded-lg p-4 border border-rpt-purple/40 shadow-[0_0_20px_rgba(138,43,226,0.15)]">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-purple drop-shadow-[0_0_8px_rgba(138,43,226,0.6)]">Official Partnership Status</h3>
+            <p className="text-white text-xl font-heading font-bold drop-shadow-[0_0_6px_rgba(138,43,226,0.4)]">
               "DraftKings — Official Betting Partner of the Rocket Pool Tour."
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-3 border border-rpt-aqua/30">
-            <h3 className="font-heading font-bold text-base mb-1 text-rpt-aqua">Content & Influencer Expansion</h3>
-            <p className="text-gray-300 text-xs">
+          <div className="bg-gradient-to-br from-rpt-aqua/20 via-rpt-aqua/10 to-transparent rounded-lg p-4 border border-rpt-aqua/40 shadow-[0_0_20px_rgba(0,191,255,0.15)]">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-aqua drop-shadow-[0_0_8px_rgba(0,191,255,0.6)]">Content & Influencer Expansion</h3>
+            <p className="text-gray-200 text-sm font-medium">
               Development of long-term content series, behind-the-scenes features, and influencer-driven integrations designed to engage fans across all platforms.
             </p>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-3 border border-rpt-yellow/30">
-            <h3 className="font-heading font-bold text-base mb-1 text-rpt-yellow">Brand Visibility Opportunities</h3>
-            <p className="text-gray-300 mb-2 text-xs">High-impact branding placements including:</p>
-            <ul className="space-y-1 text-gray-300" style={{ fontSize: '0.65rem' }}>
+          <div className="bg-gradient-to-br from-rpt-yellow/20 via-rpt-yellow/10 to-transparent rounded-lg p-4 border border-rpt-yellow/40 shadow-[0_0_20px_rgba(255,215,0,0.15)]">
+            <h3 className="font-heading font-bold text-lg mb-2 text-rpt-yellow drop-shadow-[0_0_8px_rgba(255,215,0,0.6)]">Brand Visibility Opportunities</h3>
+            <p className="text-gray-200 text-sm font-medium mb-2">High-impact branding placements including:</p>
+            <ul className="space-y-1 text-gray-200 text-xs font-medium">
               <li>• Logos on-screen and in marketing materials</li>
-              <li>• <span className="font-bold">Player jerseys</span></li>
-              <li>• <span className="font-bold">Venue signage</span></li>
+              <li>• <span className="font-bold text-white">Player jerseys</span></li>
+              <li>• <span className="font-bold text-white">Venue signage</span></li>
               <li>• Integrated digital overlays and analytics tie-ins</li>
             </ul>
           </div>
