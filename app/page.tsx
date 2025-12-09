@@ -70,13 +70,13 @@ export default function Home() {
 
           {/* Background */}
           <div className="absolute inset-0 flex items-center justify-center opacity-[0.15] overflow-hidden">
-            {/* Mobile Video - background (flipped to go from bottom-left to top-right) */}
+            {/* Mobile Video - background */}
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="w-[80%] h-auto object-contain md:hidden scale-x-[-1] scale-y-[-1]"
+              className="w-[80%] h-auto object-contain md:hidden"
             >
               <source src="/videos/background.mp4" type="video/mp4" />
             </video>
