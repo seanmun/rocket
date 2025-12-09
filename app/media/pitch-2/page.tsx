@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X, Handshake } from 'lucide-react';
 import { useSwipeGesture } from '@/hooks/useSwipeGesture';
+import { BroadcastSlide } from '@/components/broadcast-slide';
 
 const slides = [
   {
@@ -173,40 +174,7 @@ const slides = [
   {
     id: 6,
     title: 'BROADCAST & DIGITAL REACH',
-    content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8">Digital & Global Audience / Broadcast</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div className="bg-gradient-to-br from-rpt-teal/20 to-rpt-teal/10 rounded-lg p-6 border border-rpt-teal/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-teal">U.S. Television Reach</h3>
-            <div className="text-4xl font-heading font-bold text-rpt-teal mb-2">125M</div>
-            <p className="text-gray-300">U.S. TV households (Nielsen Media)</p>
-          </div>
-          <div className="bg-gradient-to-br from-rpt-purple/20 to-rpt-purple/10 rounded-lg p-6 border border-rpt-purple/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-purple">International Distribution</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>• <span className="font-bold">beIN Sports – ENA:</span> 50M households</li>
-              <li>• <span className="font-bold">SKY (UK & Ireland):</span> 23M subscribers</li>
-            </ul>
-          </div>
-        </div>
-        <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700">
-          <h3 className="font-heading font-bold text-xl mb-4 text-rpt-aqua">Digital & Social Presence</h3>
-          <p className="text-gray-300 mb-3">Active platforms: <span className="font-bold">Instagram, YouTube, TikTok, Facebook</span></p>
-          <p className="text-gray-300 mb-4">A <span className="font-bold">Progressive Web App (PWA)</span> will support sponsor activations, contests, sweepstakes, and real-time engagement.</p>
-          <div className="grid grid-cols-2 gap-4 mt-4">
-            <div className="bg-rpt-gray-900 rounded-lg p-4">
-              <p className="text-sm text-gray-400 mb-1">Mosconi Cup 2022</p>
-              <p className="text-lg font-bold text-rpt-teal">1M livestream views</p>
-            </div>
-            <div className="bg-rpt-gray-900 rounded-lg p-4">
-              <p className="text-sm text-gray-400 mb-1">World Pool Championship 2022</p>
-              <p className="text-lg font-bold text-rpt-purple">1M livestream views</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
+    content: <BroadcastSlide includeReachSummary={false} />,
   },
   {
     id: 7,
