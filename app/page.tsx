@@ -77,6 +77,7 @@ export default function Home() {
               muted
               playsInline
               className="w-[80%] h-auto object-contain md:hidden scale-y-[-1]"
+              style={{ transform: 'scaleY(-1) translateY(55px)' }}
             >
               <source src="/videos/background.mp4" type="video/mp4" />
             </video>
@@ -370,29 +371,22 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
-              <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all">
-                <Building2 className="w-10 h-10 text-rpt-teal mb-4" />
-                <h3 className="font-heading font-bold text-xl mb-3">Prime Exposure</h3>
-                <p className="text-gray-300">
-                  Position your brand in front of professional players, enthusiasts, and industry leaders
-                </p>
-              </div>
-
-              <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all">
-                <Users className="w-10 h-10 text-rpt-aqua mb-4" />
-                <h3 className="font-heading font-bold text-xl mb-3">Direct Access</h3>
-                <p className="text-gray-300">
-                  Connect directly with a passionate community of pool players and fans
-                </p>
-              </div>
-
-              <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-gray-700 hover:border-rpt-teal transition-all">
-                <TrendingUp className="w-10 h-10 text-rpt-purple mb-4" />
-                <h3 className="font-heading font-bold text-xl mb-3">Growing Market</h3>
-                <p className="text-gray-300">
-                  Be part of the fastest-growing professional pool tour in the region
-                </p>
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="bg-rpt-gray-800 rounded-lg p-6 md:p-8 border border-rpt-gray-700">
+                <ul className="space-y-4 text-left">
+                  <li className="flex items-start gap-3">
+                    <span className="text-rpt-teal mt-1">•</span>
+                    <span className="text-gray-300">Prime exposure to professional players, enthusiasts, and industry leaders</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-rpt-teal mt-1">•</span>
+                    <span className="text-gray-300">Direct access to a passionate community of pool players and fans</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-rpt-teal mt-1">•</span>
+                    <span className="text-gray-300">Be part of the fastest-growing professional pool tour</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
