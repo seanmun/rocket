@@ -5,18 +5,40 @@ import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X, Handshake } from 'lucide-react';
 import { useSwipeGesture } from '@/hooks/useSwipeGesture';
 import { BroadcastSlide } from '@/components/broadcast-slide';
+import { USMap } from '@/components/us-map';
+import { AdvantagesSlide } from '@/components/advantages-slide';
 
 const slides = [
   {
     id: 1,
     title: 'MISSION',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Mission</h2>
-        <div className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-purple/30">
-          <p className="text-xl text-gray-300 leading-relaxed">
-            The Rocket Pool Tour (RPT) exists to engage, inspire, and positively impact fans, partners, and communities worldwide by showcasing the greatest talents in professional pool. The Tour promotes the sport by sanctioning tournaments and supporting its members' professional growth and interests.
-          </p>
+      <div className="space-y-8">
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
+          Mission
+        </h2>
+
+        {/* Mission Statement Card */}
+        <div className="bg-gradient-to-br from-rpt-teal/30 via-rpt-purple/20 to-rpt-aqua/10 rounded-xl p-8 border-2 border-rpt-teal/40 shadow-[0_0_30px_rgba(0,166,166,0.2)] relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="relative z-10">
+            <p className="text-xl text-white leading-relaxed font-medium text-center">
+              The Rocket Pool Tour (RPT) exists to <span className="font-bold text-rpt-teal">engage, inspire, and positively impact</span> fans, partners, and communities worldwide by showcasing the greatest talents in professional pool. The Tour promotes the sport by sanctioning tournaments and supporting its members' <span className="font-bold text-rpt-purple">professional growth and interests</span>.
+            </p>
+          </div>
+        </div>
+
+        {/* Logo Section */}
+        <div className="flex justify-center">
+          <div className="w-80 h-80 flex items-center justify-center">
+            <Image
+              src="/logos/rpt-logo-square.png"
+              alt="Rocket Pool Tour"
+              width={320}
+              height={320}
+              className="object-contain drop-shadow-[0_0_40px_rgba(0,166,166,0.4)]"
+            />
+          </div>
         </div>
       </div>
     ),
@@ -25,49 +47,85 @@ const slides = [
     id: 2,
     title: 'FOUNDERS',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Founders</h2>
+      <div className="space-y-8">
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
+          Founders
+        </h2>
 
-        {/* Founder Photos */}
-        <div className="flex justify-start gap-8 mb-8">
-          <div className="text-center">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple flex items-center justify-center overflow-hidden mb-3">
-              <Image
-                src="/images/Rodney-sq.png"
-                alt="Rodney Morris"
-                width={128}
-                height={128}
-                className="w-full h-full object-cover"
-              />
+        {/* Founder Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {/* Rodney Morris */}
+          <div className="bg-gradient-to-br from-rpt-teal/30 via-rpt-teal/20 to-rpt-teal/10 rounded-xl p-6 border-2 border-rpt-teal/40 shadow-[0_0_30px_rgba(0,166,166,0.2)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+            <div className="relative z-10 text-center">
+              <div className="w-40 h-40 rounded-full bg-gradient-to-br from-rpt-teal to-rpt-purple flex items-center justify-center overflow-hidden mb-4 mx-auto ring-4 ring-rpt-teal/50 shadow-[0_0_20px_rgba(0,166,166,0.4)]">
+                <Image
+                  src="/images/Rodney-sq.png"
+                  alt="Rodney Morris"
+                  width={160}
+                  height={160}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="font-heading font-bold text-2xl text-rpt-teal drop-shadow-[0_0_10px_rgba(0,166,166,0.8)]">Rodney Morris</p>
+              <p className="text-lg text-white font-semibold mb-2">"Rocket"</p>
+              <p className="text-sm text-gray-200">World Champion • Hall of Fame Player</p>
             </div>
-            <p className="font-heading font-bold text-rpt-teal">Rodney Morris</p>
-            <p className="text-sm text-gray-400">"Rocket"</p>
           </div>
-          <div className="text-center">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-rpt-purple to-rpt-teal flex items-center justify-center overflow-hidden mb-3">
-              <Image
-                src="/images/Ed-sq.png"
-                alt="Ed Glode"
-                width={128}
-                height={128}
-                className="w-full h-full object-cover"
-              />
+
+          {/* Ed Glode */}
+          <div className="bg-gradient-to-br from-rpt-purple/30 via-rpt-purple/20 to-rpt-purple/10 rounded-xl p-6 border-2 border-rpt-purple/40 shadow-[0_0_30px_rgba(138,43,226,0.2)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+            <div className="relative z-10 text-center">
+              <div className="w-40 h-40 rounded-full bg-gradient-to-br from-rpt-purple to-rpt-teal flex items-center justify-center overflow-hidden mb-4 mx-auto ring-4 ring-rpt-purple/50 shadow-[0_0_20px_rgba(138,43,226,0.4)]">
+                <Image
+                  src="/images/Ed-sq.png"
+                  alt="Ed Glode"
+                  width={160}
+                  height={160}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="font-heading font-bold text-2xl text-rpt-purple drop-shadow-[0_0_10px_rgba(138,43,226,0.8)]">Ed Glode</p>
+              <p className="text-lg text-white font-semibold mb-2">"EJ"</p>
+              <p className="text-sm text-gray-200">Business Expertise • Visionary</p>
             </div>
-            <p className="font-heading font-bold text-rpt-purple">Ed Glode</p>
-            <p className="text-sm text-gray-400">"EJ"</p>
           </div>
         </div>
 
-        <div className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-teal/30">
-          <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            In 2008, World Champion <span className="text-rpt-teal font-bold">"Rocket" Rodney Morris</span> met <span className="text-rpt-purple font-bold">Ed "EJ" Glode</span> at the first Wyoming Open Pool Tournament, where Ed personally invited Rodney to compete. The two became fast friends, bonded by their passion for pool and their shared belief that the game—and the way it's traditionally played—needed to evolve.
-          </p>
-          <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            Together, with more than <span className="text-rpt-yellow font-bold">70 years of combined experience</span>, they created the innovative all‑offense <span className="text-rpt-purple font-bold">Rocket Run-Out©</span> game format. Ed's business expertise and numerical intuition, combined with Rodney's Hall of Fame playing career, formed the perfect foundation for this vision.
-          </p>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            After years of testing and refinement, they are now ready to elevate the sport of billiards through the official <span className="text-rpt-teal font-bold">Rocket Pool Tour©</span>.
-          </p>
+        {/* Story Sections */}
+        <div className="space-y-4">
+          {/* First Meeting */}
+          <div className="bg-gradient-to-br from-rpt-aqua/20 via-rpt-aqua/10 to-transparent rounded-xl p-6 border border-rpt-aqua/30 shadow-[0_0_20px_rgba(0,191,255,0.15)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.05),transparent_50%)]" />
+            <div className="relative z-10">
+              <h3 className="font-heading font-bold text-xl mb-3 text-rpt-aqua">The Beginning - 2008</h3>
+              <p className="text-white leading-relaxed">
+                At the first Wyoming Open Pool Tournament, World Champion <span className="font-bold text-rpt-teal">"Rocket" Rodney Morris</span> met <span className="font-bold text-rpt-purple">Ed "EJ" Glode</span>, who personally invited Rodney to compete. The two became fast friends, bonded by their passion for pool and their shared belief that the game needed to evolve.
+              </p>
+            </div>
+          </div>
+
+          {/* Combined Experience */}
+          <div className="bg-gradient-to-br from-rpt-yellow/20 via-rpt-yellow/10 to-transparent rounded-xl p-6 border border-rpt-yellow/30 shadow-[0_0_20px_rgba(255,215,0,0.15)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.05),transparent_50%)]" />
+            <div className="relative z-10">
+              <h3 className="font-heading font-bold text-xl mb-3 text-rpt-yellow">70+ Years Combined Experience</h3>
+              <p className="text-white leading-relaxed">
+                Together, they created the innovative all-offense <span className="font-bold text-rpt-purple">Rocket Run-Out©</span> game format. Ed's business expertise and numerical intuition, combined with Rodney's Hall of Fame playing career, formed the perfect foundation for this vision.
+              </p>
+            </div>
+          </div>
+
+          {/* The Vision */}
+          <div className="bg-gradient-to-br from-rpt-teal/30 via-rpt-purple/20 to-rpt-aqua/10 rounded-xl p-6 border-2 border-rpt-teal/40 shadow-[0_0_30px_rgba(0,166,166,0.2)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+            <div className="relative z-10 text-center">
+              <p className="text-xl text-white leading-relaxed font-semibold">
+                After years of testing and refinement, they are now ready to elevate the sport of billiards through the official <span className="font-bold text-rpt-teal">Rocket Pool Tour©</span>.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     ),
@@ -76,33 +134,75 @@ const slides = [
     id: 3,
     title: 'THIS IS THE RPT',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">This Is the RPT</h2>
-        <div className="bg-gradient-to-br from-rpt-purple/20 to-rpt-teal/20 rounded-lg p-8 border border-rpt-purple/30 mb-6">
-          <p className="text-2xl text-gray-300 mb-4">
-            The <span className="text-rpt-teal font-bold">Rocket Pool Tour (RPT)</span> is a new and dynamic professional billiards tour built around the fast‑paced, all‑offense <span className="text-rpt-purple font-bold">Rocket Run-Out©</span> format.
-          </p>
+      <div className="space-y-8">
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
+          This Is the RPT
+        </h2>
+
+        {/* Introduction Card */}
+        <div className="bg-gradient-to-br from-rpt-purple/30 via-rpt-teal/20 to-rpt-aqua/10 rounded-xl p-8 border-2 border-rpt-purple/40 shadow-[0_0_30px_rgba(138,43,226,0.2)] relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="relative z-10 text-center">
+            <p className="text-2xl text-white leading-relaxed font-semibold">
+              The <span className="font-bold text-rpt-teal drop-shadow-[0_0_10px_rgba(0,166,166,0.8)]">Rocket Pool Tour (RPT)</span> is a new and dynamic professional billiards tour built around the fast-paced, all-offense <span className="font-bold text-rpt-purple drop-shadow-[0_0_10px_rgba(138,43,226,0.8)]">Rocket Run-Out©</span> format.
+            </p>
+          </div>
         </div>
-        <div className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-gray-700">
-          <h3 className="font-heading font-bold text-2xl mb-6 text-rpt-teal">Season One Overview</h3>
-          <ul className="space-y-4 text-lg text-gray-300">
-            <li className="flex items-start">
-              <span className="text-rpt-teal mr-3">•</span>
-              <span><span className="font-bold">15 tour stops</span> across the United States</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-rpt-purple mr-3">•</span>
-              <span><span className="font-bold">15 consecutive weeks</span> of competition</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-rpt-aqua mr-3">•</span>
-              <span><span className="font-bold">Minimum $100,000 prize fund</span> at every stop</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-rpt-yellow mr-3">•</span>
-              <span>A season-long points race culminating in the crowning of the <span className="font-bold text-rpt-yellow">Rocket Pool Tour Champion</span> at the final event of the year</span>
-            </li>
-          </ul>
+
+        {/* Season One Overview Title */}
+        <div className="text-center">
+          <h3 className="font-heading font-bold text-3xl text-rpt-teal drop-shadow-[0_0_10px_rgba(0,166,166,0.6)]">Season One Overview</h3>
+        </div>
+
+        {/* Key Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* 15 Tour Stops */}
+          <div className="bg-gradient-to-br from-rpt-teal/30 via-rpt-teal/20 to-rpt-teal/10 rounded-xl p-6 border-2 border-rpt-teal/40 shadow-[0_0_30px_rgba(0,166,166,0.2)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+            <div className="relative z-10">
+              <div className="text-5xl font-heading font-bold text-white mb-2 drop-shadow-[0_0_10px_rgba(0,166,166,0.8)]">
+                15
+              </div>
+              <p className="text-xl font-bold text-rpt-teal mb-1">Tour Stops</p>
+              <p className="text-gray-200">across the United States</p>
+            </div>
+          </div>
+
+          {/* 15 Consecutive Weeks */}
+          <div className="bg-gradient-to-br from-rpt-purple/30 via-rpt-purple/20 to-rpt-purple/10 rounded-xl p-6 border-2 border-rpt-purple/40 shadow-[0_0_30px_rgba(138,43,226,0.2)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+            <div className="relative z-10">
+              <div className="text-5xl font-heading font-bold text-white mb-2 drop-shadow-[0_0_10px_rgba(138,43,226,0.8)]">
+                15
+              </div>
+              <p className="text-xl font-bold text-rpt-purple mb-1">Consecutive Weeks</p>
+              <p className="text-gray-200">of competition</p>
+            </div>
+          </div>
+
+          {/* $100K Prize Fund */}
+          <div className="bg-gradient-to-br from-rpt-aqua/30 via-rpt-aqua/20 to-rpt-aqua/10 rounded-xl p-6 border-2 border-rpt-aqua/40 shadow-[0_0_30px_rgba(0,191,255,0.2)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+            <div className="relative z-10">
+              <div className="text-5xl font-heading font-bold text-white mb-2 drop-shadow-[0_0_10px_rgba(0,191,255,0.8)]">
+                $100K
+              </div>
+              <p className="text-xl font-bold text-rpt-aqua mb-1">Minimum Prize Fund</p>
+              <p className="text-gray-200">at every tour stop</p>
+            </div>
+          </div>
+
+          {/* Championship */}
+          <div className="bg-gradient-to-br from-rpt-yellow/30 via-rpt-yellow/20 to-rpt-yellow/10 rounded-xl p-6 border-2 border-rpt-yellow/40 shadow-[0_0_30px_rgba(255,215,0,0.2)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+            <div className="relative z-10">
+              <div className="text-4xl font-heading font-bold text-white mb-2 drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]">
+                Champion
+              </div>
+              <p className="text-xl font-bold text-rpt-yellow mb-1">Season-Long Points Race</p>
+              <p className="text-gray-200">Crowned at the final event</p>
+            </div>
+          </div>
         </div>
       </div>
     ),
@@ -111,31 +211,74 @@ const slides = [
     id: 4,
     title: 'THE TOUR',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">The Tour</h2>
-        <div className="grid grid-cols-1 gap-6">
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-teal">Projected Launch</h3>
-            <p className="text-gray-300">Season One is targeted to begin in <span className="font-bold">Q2 of 2026</span>.</p>
+      <div className="space-y-8">
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
+          The Tour
+        </h2>
+
+        {/* Single large card with all info */}
+        <div className="bg-gradient-to-br from-rpt-teal/30 via-rpt-purple/20 to-rpt-aqua/10 rounded-xl p-10 border-2 border-rpt-teal/40 shadow-[0_0_30px_rgba(0,166,166,0.2)] relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="relative z-10 space-y-8">
+
+            {/* Launch */}
+            <div className="text-center pb-6 border-b border-white/20">
+              <p className="text-sm text-gray-300 mb-2 uppercase tracking-wide">Projected Launch</p>
+              <p className="text-3xl font-heading font-bold text-white">Q2 of <span className="text-rpt-yellow">2026</span></p>
+            </div>
+
+            {/* Key Facts Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <p className="text-4xl font-heading font-bold text-white mb-2">40</p>
+                <p className="text-gray-200">Professional Players</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl font-heading font-bold text-white mb-2">15</p>
+                <p className="text-gray-200">Tour Stops / Weeks</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl font-heading font-bold text-white mb-2">$100K</p>
+                <p className="text-gray-200">Player Salary</p>
+              </div>
+            </div>
+
+            {/* Details */}
+            <div className="space-y-4 pt-6">
+              <p className="text-lg text-white leading-relaxed">
+                <span className="font-bold text-rpt-teal">40 professional players</span> compete across <span className="font-bold">15 consecutive weeks</span> at tour stops finalized based on <span className="font-bold">geographic data</span> identifying the strongest U.S. fan bases.
+              </p>
+              <p className="text-lg text-white leading-relaxed">
+                Points accumulated throughout the season determine the <span className="font-bold text-rpt-purple">Rocket Pool Tour Champion</span>, crowned at the final event.
+              </p>
+            </div>
           </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-purple/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-purple">Tour Structure</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>• <span className="font-bold">40 professional players</span> will compete across 15 tour stops over 15 consecutive weeks</li>
-              <li>• Each week, the <span className="font-bold">highest-scoring player</span> at that tour stop will be declared the event winner</li>
-              <li>• Tour stop locations will be finalized based on <span className="font-bold">geographic data</span> identifying the strongest U.S. fan bases</li>
-            </ul>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-aqua/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-aqua">Points & Championship</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Points accumulated each week are <span className="font-bold">carried throughout the season</span></li>
-              <li>• The player with the <span className="font-bold">highest total points after all 15 events</span> will be crowned the Rocket Pool Tour Champion</li>
-            </ul>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-yellow/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-yellow">Player Compensation</h3>
-            <p className="text-gray-300">Each touring professional will receive a <span className="font-bold">$100,000 salary</span> for holding an official RPT Tour Card for the season.</p>
+        </div>
+
+        {/* Geographic Coverage Visualization */}
+        <div className="mt-8">
+          <h3 className="text-center text-xl font-heading font-bold text-rpt-teal mb-6">Nationwide Tour Coverage</h3>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="text-center p-4 bg-rpt-gray-800/50 rounded-lg border border-rpt-teal/20">
+              <div className="w-3 h-3 bg-rpt-teal rounded-full mx-auto mb-2 shadow-[0_0_10px_rgba(0,166,166,0.8)]"></div>
+              <p className="text-sm text-gray-300 font-semibold">West Coast</p>
+            </div>
+            <div className="text-center p-4 bg-rpt-gray-800/50 rounded-lg border border-rpt-purple/20">
+              <div className="w-3 h-3 bg-rpt-purple rounded-full mx-auto mb-2 shadow-[0_0_10px_rgba(138,43,226,0.8)]"></div>
+              <p className="text-sm text-gray-300 font-semibold">Southwest</p>
+            </div>
+            <div className="text-center p-4 bg-rpt-gray-800/50 rounded-lg border border-rpt-aqua/20">
+              <div className="w-3 h-3 bg-rpt-aqua rounded-full mx-auto mb-2 shadow-[0_0_10px_rgba(0,191,255,0.8)]"></div>
+              <p className="text-sm text-gray-300 font-semibold">Midwest</p>
+            </div>
+            <div className="text-center p-4 bg-rpt-gray-800/50 rounded-lg border border-rpt-teal/20">
+              <div className="w-3 h-3 bg-rpt-teal rounded-full mx-auto mb-2 shadow-[0_0_10px_rgba(0,166,166,0.8)]"></div>
+              <p className="text-sm text-gray-300 font-semibold">Southeast</p>
+            </div>
+            <div className="text-center p-4 bg-rpt-gray-800/50 rounded-lg border border-rpt-purple/20">
+              <div className="w-3 h-3 bg-rpt-purple rounded-full mx-auto mb-2 shadow-[0_0_10px_rgba(138,43,226,0.8)]"></div>
+              <p className="text-sm text-gray-300 font-semibold">Northeast</p>
+            </div>
           </div>
         </div>
       </div>
@@ -145,27 +288,39 @@ const slides = [
     id: 5,
     title: 'WHAT THE RPT OFFERS',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">What the Rocket Pool Tour Offers</h2>
-        <div className="space-y-4">
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-teal/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-teal">A New Pool Experience</h3>
-            <p className="text-gray-300">
-              A <span className="font-bold">fresh, fast-paced, offense‑driven</span> pool format powered by Rocket Run-Out©. Designed to be <span className="font-bold">family-friendly</span>, visually engaging, and <span className="font-bold">production-heavy</span>—bringing a presentation style similar to the PGA or NBA.
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-purple/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-purple">Casino & Hospitality Partnerships</h3>
-            <p className="text-gray-300">
-              Robust partnership opportunities with <span className="font-bold">casinos, sports lounges, bars, and billiard halls</span>—natural environments for fans interested in sports betting, viewership, and on‑site activations.
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-6 border border-rpt-aqua/30">
-            <h3 className="font-heading font-bold text-xl mb-3 text-rpt-aqua">Broadcast & Media Reach</h3>
-            <p className="text-gray-300">
-              Access to <span className="font-bold">125 million+ U.S. TV households</span>, with additional global broadcast distribution through partners such as beIN Sports, SKY, FOX, and CBS Sports. The Tour will also feature strong digital and social media extensions to engage fans worldwide.
-            </p>
-            <p className="text-sm text-gray-400 mt-3 italic">Production budgets available upon request.</p>
+      <div className="space-y-8">
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
+          What the RPT Offers
+        </h2>
+
+        <div className="bg-gradient-to-br from-rpt-teal/30 via-rpt-purple/20 to-rpt-aqua/10 rounded-xl p-10 border-2 border-rpt-teal/40 shadow-[0_0_30px_rgba(0,166,166,0.2)] relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="relative z-10 space-y-8">
+
+            {/* A New Pool Experience */}
+            <div className="pb-8 border-b border-white/20">
+              <h3 className="font-heading font-bold text-2xl mb-4 text-rpt-teal">A New Pool Experience</h3>
+              <p className="text-white leading-relaxed text-lg">
+                A <span className="font-bold text-rpt-teal">fresh, fast-paced, offense‑driven</span> pool format powered by Rocket Run-Out©. Designed to be <span className="font-bold">family-friendly</span>, visually engaging, and <span className="font-bold">production-heavy</span>—bringing a presentation style similar to the PGA or NBA.
+              </p>
+            </div>
+
+            {/* Casino & Hospitality Partnerships */}
+            <div className="pb-8 border-b border-white/20">
+              <h3 className="font-heading font-bold text-2xl mb-4 text-rpt-purple">Casino & Hospitality Partnerships</h3>
+              <p className="text-white leading-relaxed text-lg">
+                Robust partnership opportunities with <span className="font-bold text-rpt-purple">casinos, sports lounges, bars, and billiard halls</span>—natural environments for fans interested in sports betting, viewership, and on‑site activations.
+              </p>
+            </div>
+
+            {/* Broadcast & Media Reach */}
+            <div>
+              <h3 className="font-heading font-bold text-2xl mb-4 text-rpt-aqua">Broadcast & Media Reach</h3>
+              <p className="text-white leading-relaxed text-lg mb-3">
+                Access to <span className="font-bold text-rpt-aqua">125 million+ U.S. TV households</span>, with additional global broadcast distribution through partners such as beIN Sports, SKY, FOX, and CBS Sports. The Tour will also feature strong digital and social media extensions to engage fans worldwide.
+              </p>
+              <p className="text-sm text-gray-300 italic">Production budgets available upon request.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -262,83 +417,37 @@ const slides = [
   {
     id: 8,
     title: 'ADVANTAGES',
-    content: (
-      <div className="space-y-4">
-        <h2 className="font-heading font-bold text-5xl mb-6 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Advantages</h2>
-        <div className="space-y-3">
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
-            <h4 className="font-bold text-rpt-teal mb-2 text-lg">Broadcast App & RTX Studio Promotion</h4>
-            <p className="text-gray-300 text-sm">
-              NVIDIA can promote their <span className="font-bold">Broadcast App and RTX Studio tools</span> to content creators, streamers, and production staff associated with the RPT.
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-purple/30">
-            <h4 className="font-bold text-rpt-purple mb-2 text-lg">Exclusive Game Format & IP Ownership</h4>
-            <p className="text-gray-300 text-sm">
-              RPT will be the <span className="font-bold">only Professional Pool Tour</span> that has Rocket Run-Out being played, as RPT owns the intellectual property for the games and scoring system.
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-aqua/30">
-            <h4 className="font-bold text-rpt-aqua mb-2 text-lg">Official Tech Partner Status</h4>
-            <p className="text-gray-300 text-sm">
-              Position NVIDIA as the <span className="font-bold">Official Tech Partner of the Rocket Pool Tour©</span>.
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-yellow/30">
-            <h4 className="font-bold text-rpt-yellow mb-2 text-lg">Live Event Engagement</h4>
-            <p className="text-gray-300 text-sm">
-              Live tournaments, trade shows, and promotions create interactive fan engagement. NVIDIA can layer in <span className="font-bold">VIP meet and greets with on-site product showcasing and demos</span>.
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-teal/30">
-            <h4 className="font-bold text-rpt-teal mb-2 text-lg">Generative AI & Content Creation</h4>
-            <p className="text-gray-300 text-sm">
-              Use <span className="font-bold">generative AI (running on NVIDIA hardware)</span> to automatically create high-quality social media clips tied to specific in-game moments. (<span className="italic">"NVIDIA Precision Shot of the DAY"</span>)
-            </p>
-          </div>
-          <div className="bg-rpt-gray-800 rounded-lg p-4 border border-rpt-purple/30">
-            <h4 className="font-bold text-rpt-purple mb-2 text-lg">Multi-Platform Showcase</h4>
-            <p className="text-gray-300 text-sm">
-              Showcase NVIDIA across new RPT formats: <span className="font-bold">digital, TV, live events, apps, and social media</span>, providing a fresh, and engaging experience for the audience, while growing revenue for NVIDIA through ad content.
-            </p>
-          </div>
-        </div>
-      </div>
-    ),
+    content: <AdvantagesSlide />,
   },
   {
     id: 9,
     title: 'PARTNERSHIP OPPORTUNITY',
     content: (
-      <div className="space-y-6">
-        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,166,166,0.5)]">Partnership Opportunity</h2>
-        <div className="bg-rpt-gray-800 rounded-lg p-8 border border-rpt-purple/30">
-          <div className="space-y-6 text-gray-300">
-            <div>
-              <h3 className="font-heading font-bold text-2xl mb-3 text-rpt-teal">A New Professional Sports League</h3>
-              <p className="leading-relaxed">
-                Rocket Pool Tour, LLC would like to offer NVIDIA a Partnership opportunity as we launch the Rocket Pool Tour© as a professional sports league. This initiative aims to create a competitive, sustainable ecosystem for Professional Players, featuring tournaments across the U.S. each year.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-heading font-bold text-2xl mb-3 text-rpt-purple">A Dynamic, Modern Version of Pool</h3>
-              <p className="leading-relaxed">
-                The tour will showcase a <span className="font-bold">dynamic, entertaining, and unique version of pool</span>, branded as the "Rocket Run Out©". The non-stop action of the "Rocket Run Out©" will become a popular choice for viewers and sports fans.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-heading font-bold text-2xl mb-3 text-rpt-aqua">A First in Professional Pool: True Statistics</h3>
-              <p className="leading-relaxed">
-                This will also be the <span className="font-bold">first time in professional pool that we are able to keep accurate statistics</span>, putting pool on par with every other major sport. In an all offense format, players will now compete to achieve the highest scores and personal bests, with opportunities for dramatic comebacks in each game's final moments.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-heading font-bold text-2xl mb-3 text-rpt-yellow">Broadcast & Global Visibility</h3>
-              <p className="leading-relaxed">
-                The Rocket Pool Tour© tournaments will broadcast on <span className="font-bold">mainstream network television and live-streamed</span>, reaching audiences in the US and International markets. Social media will bolster the live tournament events, optimizing branding and advertising opportunities.
-              </p>
-            </div>
-            <p className="text-xl font-bold text-center text-rpt-teal pt-4">
+      <div className="space-y-8">
+        <h2 className="font-heading font-bold text-5xl mb-8 bg-gradient-to-r from-rpt-teal via-rpt-purple to-rpt-aqua bg-clip-text text-transparent">
+          Partnership Opportunity
+        </h2>
+
+        <div className="bg-gradient-to-br from-rpt-teal/30 via-rpt-purple/20 to-rpt-aqua/10 rounded-xl p-10 border-2 border-rpt-teal/40 shadow-[0_0_30px_rgba(0,166,166,0.2)] relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="relative z-10 space-y-6">
+            <p className="text-white leading-relaxed text-lg">
+              Rocket Pool Tour, LLC would like to offer NVIDIA a Partnership opportunity as we launch the <span className="font-bold text-rpt-aqua">Rocket Pool Tour©</span> as a professional sports league. This initiative aims to create a competitive, sustainable ecosystem for Professional Players, featuring tournaments across the U.S. each year.
+            </p>
+
+            <p className="text-white leading-relaxed text-lg">
+              The tour will showcase a <span className="font-bold text-rpt-aqua">dynamic, entertaining, and unique version of pool</span>, branded as the "Rocket Run Out©". The non-stop action of the "Rocket Run Out©" will become a popular choice for viewers and sports fans.
+            </p>
+
+            <p className="text-white leading-relaxed text-lg">
+              This will also be the <span className="font-bold text-rpt-aqua">first time in professional pool that we are able to keep accurate statistics</span>, putting pool on par with every other major sport. In an all offense format, players will now compete to achieve the highest scores and personal bests, with opportunities for dramatic comebacks in each game's final moments.
+            </p>
+
+            <p className="text-white leading-relaxed text-lg">
+              The Rocket Pool Tour© tournaments will broadcast on <span className="font-bold text-rpt-aqua">mainstream network television and live-streamed</span>, reaching audiences in the US and International markets. Social media will bolster the live tournament events, optimizing branding and advertising opportunities.
+            </p>
+
+            <p className="text-xl font-bold text-center text-rpt-yellow pt-4">
               The Rocket Pool Tour© is poised to captivate audiences from its very first event.
             </p>
           </div>
@@ -438,7 +547,7 @@ export default function Pitch1Page() {
     <div className="fixed inset-0 bg-rpt-black text-white overflow-hidden">
       {/* Slide Container */}
       <div className="relative h-full flex items-center justify-center p-4 md:p-8">
-        <div ref={contentRef} className="max-w-6xl w-full h-full overflow-y-auto pb-24 pt-16">
+        <div ref={contentRef} className="max-w-6xl w-full h-full overflow-y-auto pb-24 pt-16 px-8">
           {slides[currentSlide].content}
         </div>
 

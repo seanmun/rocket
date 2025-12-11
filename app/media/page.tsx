@@ -52,7 +52,11 @@ export default function MediaPage() {
 
       const data = await response.json();
 
-      if (data.valid) {
+      if (response.status === 429) {
+        // Rate limit exceeded
+        const retryAfter = data.retryAfter ? new Date(data.retryAfter).toLocaleTimeString() : 'later';
+        setError(`Too many attempts. Please try again after ${retryAfter}.`);
+      } else if (data.valid) {
         router.push(`/media/${selectedPitch}`);
       } else {
         setError('Incorrect password. Please try again.');
